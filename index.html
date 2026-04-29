@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מסע אל הלב — ריטריט בסיני | מאי אנגליסטר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Heebo:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+
+  /* ── TOKENS ── */
+  :root {
+    --cream:   #F6F2EC;
+    --sand:    #E9DCCF;
+    --beige:   #D8C3AA;
+    --clay:    #C27A5A;
+    --brown:   #7A4E35;
+    --caramel: #B8875D;
+    --turq:    #6FAFB2;
+    --olive:   #9A9A72;
+    --dark:    #1C1008;
+    --dark2:   #2A1A0C;
+    --text:    #3A2416;
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Heebo', 'Arial Hebrew', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.95;
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 10rem;
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(to bottom, rgba(15,8,4,.72) 0%, rgba(20,12,6,.48) 45%, rgba(246,242,236,0) 100%),
+      url('/images/img5.jpg') center 35% / cover no-repeat;
+  }
+
+  /* subtle vignette grain on hero */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,.35) 100%);
+    pointer-events: none;
+  }
+
+  /* fade to dark — flows into section 2 */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(15,8,4,.6));
+    pointer-events: none;
+  }
+
+  /* scroll cue */
+  .scroll-cue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    color: var(--cream);
+    opacity: .6;
+    font-size: .7rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+    margin-top: 4.5rem;
+    animation: cuePulse 2.8s ease-in-out infinite;
+  }
+
+  .scroll-cue-line {
+    width: 1px;
+    height: 64px;
+    background: linear-gradient(var(--cream), transparent);
+    animation: cuePulse 2.8s ease-in-out infinite;
+  }
+
+  @keyframes cuePulse {
+    0%, 100% { opacity: .5; transform: translateY(0); }
+    50% { opacity: .9; transform: translateY(6px); }
+  }
+
+  .hero-eyebrow {
+    font-size: .68rem;
+    font-weight: 300;
+    letter-spacing: .38em;
+    color: var(--turq);
+    opacity: .68;
+    text-transform: uppercase;
+    margin-bottom: 2.8rem;
+    position: relative;
+    z-index: 1;
+    font-family: 'Heebo', sans-serif;
+  }
+
+  .hero h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 300;
+    font-size: clamp(3.2rem, 10vw, 7rem);
+    color: var(--cream);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    margin-bottom: 1.3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-tagline {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--sand);
+    opacity: .6;
+    margin-bottom: 4rem;
+    letter-spacing: .08em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    color: var(--cream);
+    opacity: .26;
+    font-size: .7rem;
+    letter-spacing: .22em;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    opacity: .2;
+    color: var(--cream);
+    font-size: .6rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(var(--cream), transparent);
+    animation: scrollAnim 2.5s ease-in-out infinite;
+  }
+
+  @keyframes scrollAnim {
+    0%   { transform: scaleY(1); opacity: .6; }
+    50%  { transform: scaleY(.5); opacity: 1; }
+    100% { transform: scaleY(1); opacity: .6; }
+  }
+
+  /* ── LAYOUT ── */
+  .s {
+    padding: 7.5rem 2rem;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .s-center { text-align: center; }
+
+  /* ── TYPOGRAPHY ── */
+  .eyebrow {
+    display: block;
+    font-size: .66rem;
+    font-weight: 400;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+    color: var(--clay);
+    opacity: .78;
+    margin-bottom: 1.8rem;
+  }
+
+  .eyebrow-turq { color: var(--turq); opacity: .65; }
+
+  h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6.5vw, 4.2rem);
+    line-height: 1.2;
+    color: var(--brown);
+    margin-bottom: 2.5rem;
+    letter-spacing: -.02em;
+  }
+
+  h2.on-dark  { color: var(--cream); }
+  h2.on-sand  { color: var(--brown); }
+
+  p {
+    font-size: 1rem;
+    line-height: 2.05;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+  p.on-dark    { color: var(--sand); opacity: .82; }
+  p.muted      { font-size: .87rem; opacity: .58; line-height: 1.85; }
+  p.muted.on-dark { color: var(--sand); }
+
+  .poem {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 300;
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    line-height: 2.4;
+    color: var(--brown);
+    margin-bottom: 0;
+  }
+
+  .poem.on-dark { color: var(--cream); opacity: .88; }
+
+  .divider {
+    width: 30px;
+    height: 1px;
+    background: var(--clay);
+    opacity: .28;
+    margin: 2.8rem auto;
+  }
+
+  /* ── BACKGROUNDS ── */
+  .bg-cream { background: var(--cream); }
+  .bg-sand  { background: #EDE3CB; }
+  .bg-dark  { background: var(--dark); }
+
+  /* ── VISUAL SECTIONS (CSS atmosphere) ── */
+  .visual {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .visual.tall  { height: 540px; }
+  .visual.short { height: 260px; }
+
+  /* vignette on all visuals */
+  .visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,.18) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .v-sea {
+    background:
+      radial-gradient(ellipse at 42% 32%, rgba(255,240,180,.15) 0%, transparent 44%),
+      linear-gradient(180deg,
+        #8AADB8 0%, #5A9098 18%, #48888E 38%, #36707A 58%, #265860 78%, #1C4858 100%);
+  }
+
+  .v-desert {
+    background:
+      radial-gradient(ellipse at 52% 18%, rgba(220,180,100,.28) 0%, transparent 52%),
+      linear-gradient(180deg,
+        #8CA6B2 0%, #9A9070 10%, #C8A870 24%, #D8B878 42%,
+        #B89060 60%, #9A7048 76%, #7A5030 90%, #5A3820 100%);
+  }
+
+  .v-golden {
+    background:
+      radial-gradient(ellipse at 50% 52%, rgba(220,160,60,.32) 0%, transparent 52%),
+      linear-gradient(180deg,
+        #5A7088 0%, #7898A0 10%, #B8A878 28%, #D4904A 48%,
+        #C07030 66%, #9A5028 80%, #7A3818 92%, #5A2810 100%);
+  }
+
+  .v-night {
+    background:
+      radial-gradient(ellipse at 50% 78%, rgba(200,100,40,.24) 0%, rgba(150,60,10,.08) 45%, transparent 68%),
+      linear-gradient(180deg,
+        #060402 0%, #120A06 35%, #200E08 65%, #301408 85%, #3C180A 100%);
+  }
+
+  .v-morning {
+    background:
+      radial-gradient(ellipse at 50% 5%, rgba(255,230,160,.22) 0%, transparent 52%),
+      linear-gradient(180deg,
+        #E8C88A 0%, #D8A060 18%, #B87040 35%, #7A9098 55%, #4A8898 75%, #286878 100%);
+  }
+
+  /* ── COLLAGE ── */
+  .collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .collage-cell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .collage-cell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,.15) 100%);
+  }
+
+  .cc-tall   { grid-row: span 2; }
+  .cc-wide   { grid-column: span 2; }
+
+  .ci-sea    { background: linear-gradient(160deg, #5A9098 0%, #3A7080 55%, #285868 100%); }
+  .ci-desert { background: linear-gradient(155deg, #C8A870 0%, #A07040 55%, #7A5030 100%); }
+  .ci-warm   { background:
+    radial-gradient(ellipse at 35% 40%, rgba(255,220,120,.28) 0%, transparent 55%),
+    linear-gradient(155deg, #D49860 0%, #B07030 55%, #884820 100%); }
+  .ci-night  { background:
+    radial-gradient(ellipse at 50% 70%, rgba(200,90,30,.22) 0%, transparent 55%),
+    linear-gradient(160deg, #280E08 0%, #381808 50%, #4A2010 100%); }
+  .ci-linen  { background: linear-gradient(160deg, #ECD8C0 0%, #D4C0A0 55%, #C0A880 100%); }
+
+  /* ── INCLUDES ── */
+  .includes { list-style: none; margin-top: 2.8rem; }
+
+  .includes li {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(194,122,90,.13);
+    font-size: .96rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    line-height: 1.75;
+  }
+
+  .includes li::before {
+    content: '✺';
+    color: var(--clay);
+    opacity: .48;
+    font-size: .56rem;
+    margin-top: .55rem;
+    flex-shrink: 0;
+  }
+
+  .includes li:last-child { border-bottom: none; }
+
+  /* ── ACCOMMODATION ── */
+  .accom-grid { display: grid; gap: 1rem; margin-top: 2.8rem; }
+
+  .accom-item {
+    padding: 1.8rem 2rem;
+    border: 1px solid rgba(194,122,90,.18);
+    border-radius: 8px;
+    background: rgba(255,255,255,.28);
+    transition: background .3s;
+  }
+
+  .accom-item:hover { background: rgba(255,255,255,.48); }
+
+  .accom-item h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--brown);
+    margin-bottom: .3rem;
+  }
+
+  .accom-item p { font-size: .84rem; opacity: .58; margin: 0; line-height: 1.6; }
+
+  /* ── FAQ ── */
+  .faq-item { padding: 1.8rem 0; border-bottom: 1px solid rgba(194,122,90,.13); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'Frank Ruhl Libre', serif; font-size: 1.05rem; font-weight: 400; color: var(--brown); margin-bottom: .5rem; }
+  .faq-a { font-size: .9rem; opacity: .62; line-height: 1.88; margin: 0; }
+
+  /* ── PRICE ── */
+  .price-wrap {
+    padding: 7rem 2rem;
+    text-align: center;
+    background: var(--dark);
+  }
+
+  .price-label { display: block; font-size: .66rem; letter-spacing: .3em; color: var(--turq); text-transform: uppercase; font-family: 'Heebo', sans-serif; font-weight: 300; opacity: .72; margin-bottom: 1.2rem; }
+  .price-main  { display: block; font-family: 'Frank Ruhl Libre', serif; font-size: clamp(3.2rem, 9vw, 5rem); font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: .6rem; }
+  .price-reg   { display: block; font-size: .86rem; color: var(--sand); opacity: .42; margin-bottom: 4rem; }
+
+  .details-table { max-width: 360px; margin: 0 auto; text-align: right; display: grid; gap: 1.4rem; }
+  .dt-row { display: flex; gap: 1.8rem; align-items: baseline; }
+  .dt-label { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--clay); opacity: .62; min-width: 90px; flex-shrink: 0; font-family: 'Heebo', sans-serif; line-height: 1.6; }
+  .dt-val { font-family: 'Frank Ruhl Libre', serif; font-size: 1rem; color: var(--cream); line-height: 1.6; }
+  .dt-val.sm { font-family: 'Heebo', sans-serif; font-size: .84rem; opacity: .5; }
+
+  /* ── ABOUT PHOTO ── */
+  .about-photo {
+    display: block;
+    width: 175px;
+    height: 230px;
+    border-radius: 6px;
+    background:
+      radial-gradient(ellipse at 50% 28%, rgba(255,220,160,.28) 0%, transparent 58%),
+      linear-gradient(160deg, #D4B890 0%, #A87840 42%, #7A5028 76%, #5A3818 100%);
+    margin: 0 auto 3rem;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: .88rem;
+    letter-spacing: .1em;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-clay { background: var(--clay); color: var(--cream); }
+  .btn-clay:hover { background: var(--brown); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(122,78,53,.28); }
+
+  .btn-outline { background: transparent; border: 1px solid rgba(246,242,236,.3); color: var(--cream); }
+  .btn-outline:hover { border-color: rgba(246,242,236,.65); background: rgba(246,242,236,.06); }
+
+  /* ── FLOATING WHATSAPP ── */
+  .wa-float {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    background: var(--clay);
+    color: var(--cream);
+    text-decoration: none;
+    padding: .85rem 1.6rem;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-size: .82rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+    box-shadow: 0 4px 24px rgba(194,122,90,.32);
+    transition: all .3s ease;
+  }
+
+  .wa-float:hover { background: var(--brown); transform: translateY(-2px); box-shadow: 0 6px 32px rgba(122,78,53,.36); }
+  .wa-dot { width: 6px; height: 6px; background: var(--cream); border-radius: 50%; opacity: .7; }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 9rem 2rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(184,135,93,.1) 0%, transparent 55%),
+      linear-gradient(180deg, #180C06 0%, #271408 60%, #1A0C06 100%);
+  }
+
+  .cta-pre { font-size: .66rem; letter-spacing: .3em; text-transform: uppercase; color: var(--turq); opacity: .58; font-family: 'Heebo', sans-serif; margin-bottom: 2rem; display: block; }
+  .cta-line { font-family: 'Frank Ruhl Libre', serif; font-weight: 300; font-size: clamp(1.5rem, 5vw, 2.4rem); color: var(--cream); line-height: 1.75; max-width: 460px; margin: 0 auto 3.5rem; opacity: .92; }
+  .cta-note { margin-top: 1.8rem; font-size: .68rem; color: var(--sand); opacity: .22; letter-spacing: .16em; display: block; }
+
+  /* ── MOROCCAN SPLIT ── */
+  .moroccan-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    direction: ltr;
+  }
+
+  .moroccan-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+  }
+
+  .moroccan-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+  }
+
+  .moroccan-text {
+    background: #E8DCCA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem;
+    direction: rtl;
+    position: relative;
+  }
+
+  /* dashed Moroccan border on the join edge */
+  .moroccan-text::after {
+    content: '';
+    position: absolute;
+    top: 4rem; bottom: 4rem;
+    left: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(194,122,90,.35) 0px,
+      rgba(194,122,90,.35) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  }
+
+  .m-ornament {
+    color: var(--clay);
+    opacity: .45;
+    font-size: .9rem;
+    letter-spacing: .4em;
+    margin-bottom: 1.8rem;
+    display: block;
+  }
+
+  .m-rule {
+    width: 36px;
+    height: 1px;
+    background: var(--clay);
+    opacity: .3;
+    margin: 2rem 0;
+  }
+
+  .m-lines {
+    font-size: .98rem;
+    line-height: 2.3;
+    color: var(--text);
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    .moroccan-split { grid-template-columns: 1fr; direction: rtl; }
+    .moroccan-img { min-height: 55vw; }
+    .moroccan-text { padding: 4rem 2rem; }
+    .moroccan-text::after { display: none; }
+  }
+
+  /* ── FACILITATORS ── */
+  .facilitator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .facilitator-photo {
+    border-radius: 8px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .facilitator-photo img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .facilitator-role {
+    font-size: .72rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--clay);
+    opacity: .75;
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 1.8rem !important;
+  }
+
+  .facilitator-sep {
+    width: 100%;
+    height: 1px;
+    background: rgba(194,122,90,.15);
+    margin: 5rem 0;
+  }
+
+  @media (max-width: 720px) {
+    .facilitator-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .facilitator-photo { max-width: 300px; margin: 0 auto; }
+    .facilitator-photo img { aspect-ratio: 4/5; }
+  }
+
+  /* ── FOOTER ── */
+  footer { background: #0C0804; padding: 3.5rem 2rem; text-align: center; }
+  .footer-name { font-family: 'Frank Ruhl Libre', serif; font-size: .92rem; color: var(--cream); opacity: .28; margin-bottom: .5rem; }
+  .footer-sub  { font-size: .62rem; color: var(--sand); opacity: .14; letter-spacing: .2em; }
+
+  /* ── FADE IN ── */
+  .fade {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity .95s cubic-bezier(.22,1,.36,1),
+      transform .95s cubic-bezier(.22,1,.36,1);
+  }
+
+  .fade.visible   { opacity: 1; transform: none; }
+  .fd1 { transition-delay: .12s; }
+  .fd2 { transition-delay: .25s; }
+  .fd3 { transition-delay: .38s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .s { padding: 5rem 1.5rem; }
+    .visual { height: 280px; }
+    .visual.tall { height: 360px; }
+    .collage { grid-template-columns: 1fr 1fr; grid-template-rows: 160px 160px 160px; }
+    .cc-tall { grid-row: span 1; }
+    .cc-wide { grid-column: span 2; }
+    .wa-float span:not(.wa-dot) { display: none; }
+    .wa-float { padding: 1rem 1.2rem; }
+  }
+
+  </style>
+</head>
+<body>
+
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/972XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
+  <span class="wa-dot"></span>
+  <span>לפרטים ורישום</span>
+</a>
+
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div style="margin-bottom:2.8rem; position:relative; z-index:1;">
+    <p style="font-family:'Frank Ruhl Libre',serif; font-weight:300; font-size:clamp(1rem,2vw,1.15rem); color:var(--cream); opacity:.75; letter-spacing:.04em; margin-bottom:.3rem;">מאי אנגליסטר</p>
+    <p style="font-family:'Heebo',sans-serif; font-weight:300; font-size:.72rem; color:var(--sand); opacity:.42; letter-spacing:.12em;">מטפלת · מחזיקה מרחבים · הולכת בדרך היוגה</p>
+  </div>
+  <h1>מסע אל הלב</h1>
+  <p class="hero-tagline">ריטריט נשי · 4–7 ביוני</p>
+  <div class="hero-meta" style="opacity:.7; font-size:.82rem; font-weight:400; letter-spacing:.18em;">
+    <span>4 ימים · 3 לילות</span>
+    <span>·</span>
+    <span>ריטריט אינטימי עד 16 משתתפות</span>
+  </div>
+  <div style="margin-top:.8rem; position:relative; z-index:1;">
+    <span style="font-family:'Heebo',sans-serif; font-size:1rem; font-weight:400; color:var(--turq); letter-spacing:.32em; opacity:.95;">ביר סוור · סיני</span>
+  </div>
+  <div style="margin-top:5rem; position:relative; z-index:1;">
+    <a href="#content" class="btn btn-outline" style="font-size:.82rem; padding:.9rem 2.2rem; letter-spacing:.14em; font-family:'Heebo',sans-serif; font-weight:300;">אני רוצה לשמוע עוד</a>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ════════ מהות — FULL BLEED ════════ -->
+<div id="content" style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
+  <img src="/images/img4.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(15,8,4,.68) 0%, rgba(40,20,8,.32) 40%, rgba(30,16,6,.58) 100%);"></div>
+  <div style="position:relative;z-index:1;padding:9rem 2rem 7rem;max-width:640px;margin:0 auto;">
+    <span class="fade" style="display:block;font-size:.78rem;letter-spacing:.55em;color:var(--turq);opacity:.8;margin-bottom:3.5rem;">✦ · · · ✦</span>
+
+    <p class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(2rem,5.5vw,3.2rem);color:var(--cream);line-height:1.55;font-weight:300;margin-bottom:0;opacity:.97;">
+      באחד המקומות<br>
+      היפים בעולם
+    </p>
+
+    <p class="fade fd2" style="font-size:.95rem;line-height:2.2;color:var(--cream);opacity:.65;font-family:'Heebo',sans-serif;font-weight:300;margin-top:1.6rem;letter-spacing:.04em;">
+      בין ים להרי סיני · בין מדבר לשמיים פתוחים
+    </p>
+
+    <div style="width:28px;height:1px;background:rgba(246,242,236,.35);margin:3rem auto;" class="fade fd2"></div>
+
+    <p class="fade fd3" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.15rem,3vw,1.65rem);color:var(--cream);line-height:1.9;font-weight:300;opacity:.9;">
+      ארבעה ימים של יוגה, פילוסופיה, Sound Healing ועבודת גוף עמוקה.<br>
+      מדורות, שתיקה, ים בבוקר והרים בערב.<br>
+      ריטריט נשי אינטימי שמזמין אותך לחזור לעצמך.
+    </p>
+
+    <div class="scroll-cue fade fd3">
+      <span>גללי למטה</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- VISUAL: SEA -->
+<div class="visual tall">
+  <img src="/images/img2.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
+</div>
+
+
+<!-- ════════ המסע ════════ -->
+<div class="bg-cream">
+  <div class="s">
+    <span class="eyebrow fade">המסע</span>
+    <h2 class="fade fd1" style="font-size:clamp(2.6rem,7vw,4.6rem);">מה שקורה שם</h2>
+    <p class="fade fd1" style="font-size:clamp(1rem,2.2vw,1.18rem);line-height:1.9;margin-bottom:3rem;">
+      פתאום יש יותר מקום לנשום,
+      יותר מקום להרגיש,
+      יותר מקום להיות בתוך עצמך בלי רעש מסביב.
+    </p>
+
+    <ul class="fade fd2" style="list-style:none;padding:0;margin:0 auto;max-width:520px;text-align:right;font-family:'Heebo',sans-serif;font-size:1.02rem;line-height:1;color:var(--brown);">
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">2 תרגולי יוגה יומיים</strong> — אשטנגה / ויניאסה / תרגול עדין ומעמיק</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">מדיטציות וכלים פרקטיים</strong> לחיי היומיום</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">מרחב תרגול על אמונות מגבילות</strong> והטמעת אמונות חדשות</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">שטיפה אנרגטית וסאונד הילינג</strong></span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">משבצות מוסף</strong> — תמיכה במגע, חקר ונחים</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">קקאו סרמוניה</strong> — פתיחת לב</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">עבודת נשימה עמוקה</strong> (פראנאיאמה)</span>
+      </li>
+      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">טבילה בים ובמדבר</strong> — שחרור וחיבור לטבע</span>
+      </li>
+      <li style="padding:1.1rem 0;display:flex;gap:1.1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
+        <span><strong style="font-weight:500;">אוכל בריא ומזין</strong> — אופציות לטבעוניות וצמחוניות</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ════════ המחזיקות ════════ -->
+<div class="bg-sand">
+  <div style="padding:7rem 2rem; max-width:1000px; margin:0 auto;">
+    <span class="eyebrow fade" style="text-align:center; display:block;">המחזיקות את המרחב</span>
+
+    <!-- מאי -->
+    <div class="facilitator-grid fade fd1">
+      <div>
+        <h2>מאי אנגליסטר</h2>
+        <p class="facilitator-role">מורה בכירה ליוגה · מטפלת במגע</p>
+        <p>
+          הגוף, בעיניה, אינו כלי — הוא המקום שבו הכל מתרחש.
+          הדרך שלה לא התחילה בסטודיו.
+          היא התחילה ברגע שהגוף עצר אותה, ואילץ אותה להקשיב.
+        </p>
+        <p>
+          מאז, היא הולכת בדרך שמאמינה בדבר אחד:
+          שינוי אמיתי לא מגיע דרך הבנה —
+          הוא מגיע דרך חוויה.
+        </p>
+        <p>
+          העבודה שלה משלבת את הדיוק של האשטנגה עם הרכות של המגע,
+          ומזמינה כל אחת להיפגש עם עצמה,
+          מתוך הגוף פנימה.
+        </p>
+      </div>
+      <div class="facilitator-photo">
+        <img src="/images/may.png" alt="מאי אנגליסטר" loading="lazy">
+      </div>
+    </div>
+
+    <div class="facilitator-sep"></div>
+
+    <!-- נויה -->
+    <div class="facilitator-grid fade fd1">
+      <div class="facilitator-photo">
+        <img src="/images/noya.png" alt="נויה ישראלי" loading="lazy">
+      </div>
+      <div>
+        <h2>נויה ישראלי</h2>
+        <p class="facilitator-role">נאדר בוטו · צלילים מרפאים · מדיטציה</p>
+        <p>
+          הצליל, עבורה, הוא שפה שקדמה לכל מילה.
+          העבודה שלה מגיעה ממקום של ידיעה עמוקה —
+          שהגוף יודע לשחרר, כשנותנים לו את הסביבה הנכונה.
+        </p>
+        <p>
+          דרך קערות שירה, ריברסינג, שטיפה אנרגטית
+          וטכניקות מדיטציה שונות,
+          היא פותחת מרחב שמאפשר לשכבות עמוקות לעלות ולהשתחרר.
+        </p>
+        <p>
+          נויה עובדת עם הגוף, עם הנשימה,
+          ועם מה שמתחת לפני השטח.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- VISUAL: DESERT — replaced by section 2 bg -->
+
+
+<!-- ════════ התרגול ════════ -->
+<div class="bg-sand">
+  <div class="s">
+    <span class="eyebrow fade">גוף, תרגול ומה שקורה ביניהם</span>
+    <h2 class="fade fd1">הלב של הריטריט הוא התרגול</h2>
+    <p class="fade fd1">
+      אנחנו נתרגל כל יום — בבוקר ובשקיעה, מול הים.
+      התרגול נשען על עולמות האשטנגה, אבל לא נשאר בתוך צורה קבועה.
+    </p>
+    <p class="fade fd2">
+      ניכנס לתוך מנחים ותנוחות,
+      נחקור איך הגוף נע,
+      איך נשימה משנה תנועה,
+      ואיך אפשר לפגוש את התרגול מבפנים — לא רק לבצע אותו.
+    </p>
+    <p class="fade fd2">
+      יש כאן דיוק, אבל גם הקשבה.
+      יש חקירה, אבל בלי למהר להגיע.
+    </p>
+    <p class="fade fd3">
+      נשלב עבודה עם מגע ותמיכות,
+      כדי לאפשר לגוף לחוות עוד אפשרות —
+      להיפתח, ללמוד, לנוע אחרת.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ עומק ════════ -->
+<div class="bg-dark">
+  <div class="s">
+    <span class="eyebrow eyebrow-turq fade">עומק, אמונות והמסע הפנימי</span>
+    <h2 class="on-dark fade fd1">לראות דברים אחרת</h2>
+    <p class="on-dark fade fd1">
+      במהלך הימים ניכנס גם לשכבות הפנימיות יותר.
+      נפגוש אמונות מגבילות, דפוסים והרגלים —
+      לא דרך ניתוח, אלא דרך חוויה.
+    </p>
+    <p class="on-dark fade fd2">
+      נשלב תכנים מעולם הפילוסופיה של היוגה,
+      ונחקור איך הם פוגשים אותנו בתוך החיים עצמם.
+    </p>
+    <p class="on-dark fade fd2">
+      דרך תרגול, כתיבה, שיחה והתבוננות,
+      נפתח מרחב שבו אפשר לראות דברים אחרת —
+      לא כי צריך להשתנות,
+      אלא כי משהו נהיה ברור יותר.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- COLLAGE -->
+<div style="width:100%;overflow:hidden;line-height:0;">
+  <img src="/images/img1.jpg" alt="" loading="lazy" style="width:100%;display:block;">
+</div>
+
+
+<!-- ════════ ריברסינג ════════ -->
+<div class="bg-cream">
+  <div class="s">
+    <span class="eyebrow fade">ריברסינג, צליל ומה שמעבר למילים</span>
+    <h2 class="fade fd1">מרחב שבו דברים זזים בלי הרבה מילים</h2>
+    <p class="fade fd1">
+      לתוך המסע הזה נכנסת גם העבודה של נויה —
+      סשנים של ריברסינג, סאונד הילינג ושטיפה אנרגטית.
+    </p>
+    <p class="fade fd2">
+      זה מקום שבו אפשר לשחרר בלי להסביר,
+      ולתת למה שמבקש לעלות — לעלות.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ המקום ════════ -->
+<div class="bg-sand">
+  <div class="s">
+    <span class="eyebrow fade">המקום והקסם של סיני</span>
+    <h2 class="fade fd1">ביר סוור — קאמפ קזבלנקה</h2>
+    <p class="fade fd1">
+      חיים על הים.
+      הרבה שמיים.
+      הרים מסביב.
+    </p>
+    <p class="fade fd2">
+      אבל מה שקורה שם הוא מעבר למה שרואים.
+    </p>
+    <p class="fade fd2">
+      יש רגעים שאת פשוט יושבת מול הים
+      ומשהו נרגע.
+      לא כי עשית משהו,
+      לא כי הבנת משהו,
+      אלא כי הסביבה מאפשרת.
+    </p>
+    <p class="fade fd3">
+      הימים שם נפתחים אחרת.
+      יש זמן. יש מרחב. יש שקט מסוג אחר.
+      החיבור לאנשים נהיה פשוט יותר.
+      השיחות עמוקות יותר בלי מאמץ.
+      והגוף — פשוט מתחיל להרגיש.
+    </p>
+  </div>
+</div>
+
+
+<!-- VISUAL: NIGHT / FIRE -->
+<div class="visual v-night"></div>
+
+
+<!-- ════════ יום טיול ════════ -->
+<div class="bg-cream">
+  <div class="s">
+    <span class="eyebrow fade">יום טיול</span>
+    <h2 class="fade fd1">ההרים, המדורה, הקקאו</h2>
+    <p class="fade fd1">
+      באחד הימים נצא אל ההרים.
+      מרחב אחר, פתוח ושקט,
+      שמאפשר המשך של התהליך מתוך תנועה.
+    </p>
+    <p class="fade fd2">
+      בערב — מדורה וטקס קקאו.
+      רגע של עצירה, של התכנסות,
+      של העמקה של מה שנפתח במהלך הימים.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ מה כולל ════════ -->
+<div class="bg-sand">
+  <div class="s">
+    <span class="eyebrow fade">מה כולל הריטריט</span>
+    <h2 class="fade fd1">4 ימים · 3 לילות</h2>
+    <ul class="includes fade fd1">
+      <li>לינה בקאמפ על הים</li>
+      <li>3 ארוחות ביום — בוקר, בראנץ׳, ערב — בופה מגוון</li>
+      <li>קפה, תה ומים חופשי לאורך כל היום</li>
+      <li>תרגולי בוקר ושקיעה</li>
+      <li>סשני עומק, מדיטציה ופילוסופיה</li>
+      <li>סאונד הילינג וריברסינג עם נויה</li>
+      <li>יום טיול להרים</li>
+      <li>מדורה וטקס קקאו</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ════════ לינה ════════ -->
+<div class="bg-cream">
+  <div class="s">
+    <span class="eyebrow fade">הלינה והמרחב</span>
+    <h2 class="fade fd1">פשוטה, נעימה, קרובה לים</h2>
+    <p class="muted fade fd1">ניתן להגיע לבד או עם שותפה.</p>
+    <div class="accom-grid fade fd2">
+      <div class="accom-item">
+        <h3>חדר עם מזגן, שירותים ומקלחת פרטיים</h3>
+        <p>תוספת 40₪ ללילה</p>
+      </div>
+      <div class="accom-item">
+        <h3>חדר עם מזגן ושירותים משותפים</h3>
+        <p>מחיר הבסיס</p>
+      </div>
+      <div class="accom-item">
+        <h3>חושה עם מאוורר</h3>
+        <p>הנחה של 30₪ ללילה</p>
+      </div>
+    </div>
+    <p class="muted fade fd3" style="margin-top:2rem;">
+      במקום מסעדה עם אוכל עשיר ומזין —
+      3 ארוחות ביום, קפה, תה ומים חופשי לאורך כל היום.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ אווירה ════════ -->
+<div class="bg-dark">
+  <div class="s">
+    <span class="eyebrow eyebrow-turq fade">האווירה</span>
+    <h2 class="on-dark fade fd1">מרחב אמיתי</h2>
+    <p class="on-dark fade fd1">
+      זה לא ריטריט "רוחני" במובן הקלישאתי.
+    </p>
+    <p class="on-dark fade fd2">
+      חיבור פשוט.
+      נשים יחד.
+      תרגול, ים, אוכל, שיחות, מדורה, שקט.
+    </p>
+    <p class="on-dark fade fd2">
+      אפשר להגיע לבד, עם חברה, עם אמא —
+      כל אחת מהמקום שלה.
+    </p>
+    <p class="on-dark fade fd3">
+      ומה שנבנה שם,
+      נבנה מתוך מפגש אמיתי.
+    </p>
+  </div>
+</div>
+
+
+<!-- VISUAL: MORNING -->
+<div class="visual short">
+  <img src="/images/img6.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;">
+</div>
+
+
+<!-- ════════ הגעה ════════ -->
+<div class="bg-sand">
+  <div class="s">
+    <span class="eyebrow fade">הגעה</span>
+    <h2 class="fade fd1">גבול טאבה · 30 דקות</h2>
+    <p class="fade fd1">
+      הגעה עצמאית לגבול טאבה.
+      משם ניתן להצטרף להסעה מסודרת הלוך-חזור בתוספת תשלום,
+      או להגיע באופן עצמאי.
+    </p>
+    <p class="muted fade fd2">
+      הקאמפ נמצא כ-30 דקות מהגבול.
+      ביטוח נסיעות ומעבר גבול אינם כלולים במחיר.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ למי זה מתאים ════════ -->
+<div class="bg-dark">
+  <div class="s s-center">
+    <span class="eyebrow eyebrow-turq fade">למי זה מתאים</span>
+    <p class="poem on-dark fade fd1">
+      למי שמרגישה קריאה לעצור ולהיכנס פנימה.<br>
+      למי שמתחברת לעבודה דרך הגוף.<br>
+      למי שמבקשת להעמיק בתרגול שלה —<br>
+      ולפגוש את עצמה באופן כן וישיר.
+    </p>
+    <div class="divider fade fd2"></div>
+    <p class="muted on-dark fade fd3" style="text-align:center; color:var(--sand);">אין צורך בניסיון קודם</p>
+  </div>
+</div>
+
+
+<!-- ════════ עליי ════════ -->
+<div class="bg-cream">
+  <div class="s s-center">
+    <span class="eyebrow fade">עליי</span>
+    <div class="facilitator-photo fade fd1" style="max-width:260px; margin:0 auto 3rem;">
+      <img src="/images/may.png" alt="מאי אנגליסטר" loading="lazy" style="aspect-ratio:3/4;">
+    </div>
+    <h2 class="fade fd1">מאי אנגליסטר</h2>
+    <p class="fade fd2">
+      הולכת בדרך היוגה, מחזיקה מרחבים ומטפלת במגע.
+    </p>
+    <p class="fade fd2">
+      הגעתי אל הדרך הזו מתוך מפגש עם הגוף בתקופה של שיקום,
+      ומשם התפתחה חקירה מתמשכת של תנועה, הקשבה ונוכחות.
+    </p>
+    <p class="fade fd3">
+      העבודה שאני מביאה משלבת תרגול פיזי עם חקירה פנימית,
+      ומבוססת על ההבנה ששינוי עמוק מתרחש דרך חוויה ישירה.
+    </p>
+    <p class="fade fd3">
+      במרחבים שאני מחזיקה יש דגש על דיוק,
+      ועל האפשרות להישאר בתוך תהליך,
+      בקצב אישי ולא מוכתב.
+    </p>
+  </div>
+</div>
+
+
+<!-- ════════ PRICE ════════ -->
+<div class="price-wrap">
+  <div style="max-width:660px; margin:0 auto;">
+    <span class="price-label fade">6 הנרשמות הראשונות</span>
+    <span class="price-main fade fd1">1,800 ₪</span>
+    <span class="price-reg fade fd1">לאחר מכן — 2,000 ₪</span>
+    <div class="details-table fade fd2">
+      <div class="dt-row">
+        <span class="dt-label">תאריך</span>
+        <span class="dt-val">4–7 ביוני</span>
+      </div>
+      <div class="dt-row">
+        <span class="dt-label">מיקום</span>
+        <span class="dt-val">ביר סוור, סיני</span>
+      </div>
+      <div class="dt-row">
+        <span class="dt-label">קבוצה</span>
+        <span class="dt-val">ריטריט אינטימי עד 16 משתתפות</span>
+      </div>
+      <div class="dt-row">
+        <span class="dt-label">כולל</span>
+        <span class="dt-val sm">לינה, אוכל מלא, כל התכנים</span>
+      </div>
+      <div class="dt-row">
+        <span class="dt-label">לא כולל</span>
+        <span class="dt-val sm">מעבר גבול, ביטוח, הסעה</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════ FAQ ════════ -->
+<div class="bg-cream">
+  <div class="s">
+    <span class="eyebrow fade">שאלות</span>
+    <div class="faq-item fade fd1">
+      <p class="faq-q">צריך ניסיון ביוגה?</p>
+      <p class="faq-a">לא. הריטריט פתוח לכולן.</p>
+    </div>
+    <div class="faq-item fade fd1">
+      <p class="faq-q">אפשר להגיע לבד?</p>
+      <p class="faq-a">כן. רבות מגיעות לבד.</p>
+    </div>
+    <div class="faq-item fade fd2">
+      <p class="faq-q">איך מגיעים?</p>
+      <p class="faq-a">גבול טאבה ומשם הסעה או הגעה עצמאית. הקאמפ כ-30 דקות מהגבול.</p>
+    </div>
+    <div class="faq-item fade fd2">
+      <p class="faq-q">האם הביטוח ומעבר הגבול כלולים?</p>
+      <p class="faq-a">לא. יש צורך בביטוח נסיעות.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════ CTA ════════ -->
+<section class="cta-section">
+  <span class="cta-pre fade">ביר סוור · סיני · 4–7 ביוני</span>
+  <p class="cta-line fade fd1">
+    זהו מסע.<br>
+    והוא מתחיל ברגע שמסכימות להיכנס אליו.
+  </p>
+  <a href="https://wa.me/972XXXXXXXXX" class="btn btn-clay fade fd2">אני רוצה להצטרף</a>
+  <span class="cta-note fade fd3">לפרטים נוספים ורישום — ניתן לפנות בוואטסאפ</span>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name">מאי אנגליסטר</p>
+  <p class="footer-sub">מסע אל הלב · ביר סוור, סיני</p>
+</footer>
+
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
