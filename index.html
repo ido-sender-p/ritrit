@@ -26,7 +26,7 @@
 
   /* ── RESET ── */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
   body {
     font-family: 'Heebo', 'Arial Hebrew', sans-serif;
     background: var(--cream);
@@ -39,6 +39,7 @@
 
   /* ── HERO ── */
   .hero {
+    scroll-snap-align: start;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -77,20 +78,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .6rem;
+    gap: .7rem;
     color: var(--cream);
     opacity: .6;
-    font-size: .7rem;
-    letter-spacing: .3em;
+    font-size: .82rem;
+    letter-spacing: .32em;
     text-transform: uppercase;
     font-family: 'Heebo', sans-serif;
-    margin-top: 4.5rem;
+    margin-top: 2.8rem;
     animation: cuePulse 2.8s ease-in-out infinite;
   }
 
   .scroll-cue-line {
     width: 1px;
-    height: 64px;
+    height: 78px;
     background: linear-gradient(var(--cream), transparent);
     animation: cuePulse 2.8s ease-in-out infinite;
   }
@@ -686,27 +687,34 @@
 
 
 <!-- ════════ מהות — FULL BLEED ════════ -->
-<div id="content" style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
-  <img src="/images/img4.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;">
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(15,8,4,.68) 0%, rgba(40,20,8,.32) 40%, rgba(30,16,6,.58) 100%);"></div>
-  <div style="position:relative;z-index:1;padding:9rem 2rem 7rem;max-width:640px;margin:0 auto;">
-    <span class="fade" style="display:block;font-size:.78rem;letter-spacing:.55em;color:var(--turq);opacity:.8;margin-bottom:3.5rem;">✦ · · · ✦</span>
+<div id="content" style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; scroll-snap-align:start;">
+  <img src="/images/img8.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:brightness(.82) saturate(1.05);">
+  <div style="position:absolute;inset:0;background:rgba(10,5,2,.38);"></div>
+  <div style="position:relative;z-index:1;padding:5rem 2rem 4rem;max-width:580px;margin:0 auto;">
+    <span class="fade" style="display:block;font-size:.72rem;letter-spacing:.5em;color:var(--turq);opacity:.8;margin-bottom:2rem;">✦ · · · ✦</span>
 
-    <p class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(2rem,5.5vw,3.2rem);color:var(--cream);line-height:1.55;font-weight:300;margin-bottom:0;opacity:.97;">
-      באחד המקומות<br>
-      היפים בעולם
+    <p class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(2.2rem,5.8vw,3.6rem);color:#fff;line-height:1.42;font-weight:300;margin-bottom:0;text-shadow:0 1px 14px rgba(0,0,0,.35);">
+      באחד המקומות<br>היפים בעולם
     </p>
 
-    <p class="fade fd2" style="font-size:.95rem;line-height:2.2;color:var(--cream);opacity:.65;font-family:'Heebo',sans-serif;font-weight:300;margin-top:1.6rem;letter-spacing:.04em;">
+    <p class="fade fd2" style="font-size:1rem;line-height:1.8;color:#fff;opacity:.68;font-family:'Heebo',sans-serif;font-weight:300;margin-top:1rem;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.3);">
       בין ים להרי סיני · בין מדבר לשמיים פתוחים
     </p>
 
-    <div style="width:28px;height:1px;background:rgba(246,242,236,.35);margin:3rem auto;" class="fade fd2"></div>
+    <div class="fade fd3" style="margin-top:2.2rem;margin-bottom:2.2rem;">
+      <div style="width:40px;height:1px;background:rgba(255,255,255,.4);margin:0 auto .9rem;"></div>
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.95rem,2.3vw,1.14rem);color:#fff;line-height:1.9;font-weight:300;font-style:italic;opacity:.86;text-shadow:0 1px 10px rgba(0,0,0,.3);margin:0;">
+        הגעתי לסיני בתקופה שהכול היה סוער ומצאתי שקט.<br>
+        מתוך המקום הזה, הריטריט הזה נולד.
+      </p>
+      <div style="width:40px;height:1px;background:rgba(255,255,255,.4);margin:.9rem auto 0;"></div>
+    </div>
 
-    <p class="fade fd3" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.15rem,3vw,1.65rem);color:var(--cream);line-height:1.9;font-weight:300;opacity:.9;">
-      ארבעה ימים של יוגה, פילוסופיה, Sound Healing ועבודת גוף עמוקה.<br>
-      מדורות, שתיקה, ים בבוקר והרים בערב.<br>
-      ריטריט נשי אינטימי שמזמין אותך לחזור לעצמך.
+    <p class="fade fd3" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.08rem,2.7vw,1.42rem);color:#fff;line-height:2.05;font-weight:300;opacity:.82;text-shadow:0 1px 10px rgba(0,0,0,.28);">
+      ארבעה ימים של יוגה · פילוסופיה · ריפוי בצלילים.<br>
+      מדורות, שקט, לבד וביחד.<br>
+      ים שממלא את הלב.<br>
+      מרחב להתחבר למהות שלך ולהעניק לך זמן מדבר.
     </p>
 
     <div class="scroll-cue fade fd3">
@@ -717,61 +725,111 @@
 </div>
 
 
-<!-- VISUAL: SEA -->
-<div class="visual tall">
-  <img src="/images/img2.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
-</div>
 
 
 <!-- ════════ המסע ════════ -->
-<div class="bg-cream">
-  <div class="s">
-    <span class="eyebrow fade">המסע</span>
-    <h2 class="fade fd1" style="font-size:clamp(2.6rem,7vw,4.6rem);">מה שקורה שם</h2>
-    <p class="fade fd1" style="font-size:clamp(1rem,2.2vw,1.18rem);line-height:1.9;margin-bottom:3rem;">
-      פתאום יש יותר מקום לנשום,
-      יותר מקום להרגיש,
-      יותר מקום להיות בתוך עצמך בלי רעש מסביב.
-    </p>
+<div class="bg-cream" style="position:relative;overflow:hidden;">
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(160,114,74,.07) 1.5px,transparent 1.5px);background-size:36px 36px;"></div>
+  <div class="s" style="position:relative;z-index:1;padding-top:3.5rem;padding-bottom:3rem;">
+    <span class="eyebrow fade" style="font-size:1rem;letter-spacing:.22em;margin-bottom:1rem;">המסע</span>
+    <h2 class="fade fd1" style="font-size:clamp(2rem,5vw,3rem);margin-bottom:.4rem;">מה שקורה שם</h2>
+    <p class="fade fd1" style="font-size:.72rem;letter-spacing:.2em;font-family:'Heebo',sans-serif;color:var(--clay);opacity:.55;margin:0 0 1.6rem;font-weight:300;">4 ימים · 3 לילות · ביר סוור, סיני</p>
+    <div class="fade fd1" style="margin-bottom:2.2rem;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.82rem,1.7vw,.96rem);color:rgba(122,78,53,.55);line-height:2;font-weight:300;margin:0;text-align:center;">
+        פתאום יש יותר מקום לנשום, יותר מקום להרגיש, יותר מקום להיות בתוך עצמך.<br>
+        המהות של הריטריט הזה היא המסע<br>
+        להצליח לשגשג במקום לשרוד את החיים
+      </p>
+    </div>
 
-    <ul class="fade fd2" style="list-style:none;padding:0;margin:0 auto;max-width:520px;text-align:right;font-family:'Heebo',sans-serif;font-size:1.02rem;line-height:1;color:var(--brown);">
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">2 תרגולי יוגה יומיים</strong> — אשטנגה / ויניאסה / תרגול עדין ומעמיק</span>
+    <div class="fade fd2" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 3rem;margin-bottom:1.6rem;">
+
+      <!-- תרגול -->
+      <div style="padding-top:.2rem;">
+        <p style="font-family:'Frank Ruhl Libre',serif;font-size:1.05rem;color:var(--turq);margin:0 0 .85rem;font-weight:400;">תרגול</p>
+        <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.86rem;color:var(--brown);line-height:1;">
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">2 תרגולי יוגה יומיים — בוקר ושקיעה</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">אשטנגה / ויניאסה / תרגול עדין ומעמיק</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">פראנאיאמה ופילוסופיה של היוגה</li>
+          <li style="padding:.4rem 0;">תמיכה במגע — כניסה לעומק בתנוחות</li>
+        </ul>
+      </div>
+
+      <!-- מסע פנימה -->
+      <div style="padding-top:.2rem;">
+        <p style="font-family:'Frank Ruhl Libre',serif;font-size:1.05rem;color:var(--clay);margin:0 0 .85rem;font-weight:400;">מסע פנימה</p>
+        <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.86rem;color:var(--brown);line-height:1;">
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">מרחב תרגול על אמונות מגבילות</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">שטיפה אנרגטית וסאונד הילינג</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">ריברסינג — שחרור עמוק בנשימה</li>
+          <li style="padding:.4rem 0;">מדיטציות וכלים לחיי היומיום</li>
+        </ul>
+      </div>
+
+      <!-- חוויה ומקום -->
+      <div style="border-top:1.5px solid rgba(122,78,53,.45);padding-top:.9rem;">
+        <p style="font-family:'Frank Ruhl Libre',serif;font-size:1.05rem;color:var(--brown);margin:0 0 .85rem;font-weight:400;">חוויה ומקום</p>
+        <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.86rem;color:var(--brown);line-height:1;">
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">יום טיול בהרי סיני</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">שנורקלינג בריף המטריף של סיני</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">טבילה בים ובמדבר</li>
+          <li style="padding:.4rem 0;">מדורה בחוף — ערב שלא ישכח</li>
+        </ul>
+      </div>
+
+      <!-- הכל כלול -->
+      <div style="border-top:1.5px solid rgba(95,140,130,.6);padding-top:.9rem;">
+        <p style="font-family:'Frank Ruhl Libre',serif;font-size:1.05rem;color:rgba(80,130,120,.9);margin:0 0 .85rem;font-weight:400;">הכל כלול</p>
+        <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.86rem;color:var(--brown);line-height:1;">
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">לינה בקאמפ על הים</li>
+          <li style="padding:.4rem 0;border-bottom:1px solid rgba(122,78,53,.09);">3 ארוחות בריאות ומזינות — תפריט מיוחד לריטריט</li>
+          <li style="padding:.4rem 0;">טקס קקאו — פתיחת לב</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="fade fd3" style="text-align:left;direction:ltr;font-family:'Frank Ruhl Libre',serif;font-style:italic;color:var(--clay);opacity:.5;font-size:.85rem;margin-top:.8rem;">✦ ועוד הפתעות — יש למה לחכות</p>
+  </div>
+</div>
+
+
+<!-- ════════ התרגול ════════ -->
+<div class="bg-sand">
+  <div class="s">
+    <span class="eyebrow fade">גוף, תרגול ומה שקורה ביניהם</span>
+    <h2 class="fade fd1" style="font-size:clamp(1.6rem,4vw,2.6rem);">הלב של הריטריט הוא התרגול</h2>
+
+    <blockquote class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:clamp(.95rem,2.2vw,1.15rem);color:var(--clay);line-height:1.95;font-weight:300;border-right:2px solid rgba(160,114,74,.3);padding-right:1.2rem;margin:0 0 2.8rem;opacity:.88;">
+      כל הדברים היפים באמת מתגלים בזמנם האטי הבלתי מתחשב האוהב הפועם בקצבו של הלב
+      <cite style="display:block;font-size:.7rem;font-style:normal;letter-spacing:.1em;opacity:.5;margin-top:.7rem;font-family:'Heebo',sans-serif;">— שחר אבני</cite>
+    </blockquote>
+
+    <ul class="fade fd2" style="list-style:none;padding:0;margin:0 0 2.2rem;font-family:'Heebo',sans-serif;font-size:.97rem;color:var(--brown);">
+      <li style="padding:.6rem 0;border-bottom:1px solid rgba(122,78,53,.12);display:flex;gap:1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.62rem;flex-shrink:0;">✦</span>
+        <span>2 תרגולי יוגה יומיים — בוקר ושקיעה מול הים</span>
       </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">מדיטציות וכלים פרקטיים</strong> לחיי היומיום</span>
+      <li style="padding:.6rem 0;border-bottom:1px solid rgba(122,78,53,.12);display:flex;gap:1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.62rem;flex-shrink:0;">✦</span>
+        <span>אשטנגה / ויניאסה / תרגול עדין ומעמיק</span>
       </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">מרחב תרגול על אמונות מגבילות</strong> והטמעת אמונות חדשות</span>
+      <li style="padding:.6rem 0;border-bottom:1px solid rgba(122,78,53,.12);display:flex;gap:1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.62rem;flex-shrink:0;">✦</span>
+        <span>נשימות פראנאיאמה ועקרונות מהפילוסופיה של היוגה</span>
       </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">שטיפה אנרגטית וסאונד הילינג</strong></span>
-      </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">משבצות מוסף</strong> — תמיכה במגע, חקר ונחים</span>
-      </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">קקאו סרמוניה</strong> — פתיחת לב</span>
-      </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">עבודת נשימה עמוקה</strong> (פראנאיאמה)</span>
-      </li>
-      <li style="padding:1.1rem 0;border-bottom:1px solid rgba(122,78,53,.13);display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">טבילה בים ובמדבר</strong> — שחרור וחיבור לטבע</span>
-      </li>
-      <li style="padding:1.1rem 0;display:flex;gap:1.1rem;align-items:baseline;">
-        <span style="color:var(--turq);font-size:.7rem;flex-shrink:0;">✦</span>
-        <span><strong style="font-weight:500;">אוכל בריא ומזין</strong> — אופציות לטבעוניות וצמחוניות</span>
+      <li style="padding:.6rem 0;display:flex;gap:1rem;align-items:baseline;">
+        <span style="color:var(--turq);font-size:.62rem;flex-shrink:0;">✦</span>
+        <span>עבודת מגע ותמיכה (Assist) — כניסה לעומק בתנוחות</span>
       </li>
     </ul>
+
+    <p class="fade fd3" style="font-size:.97rem;line-height:2;color:var(--text);">
+      נתרגל כל יום — בבוקר ובשקיעה, מול הים.
+      התרגול נשען על עולמות האשטנגה: דיוק בתנוחות, עבודה עם נשימה, חקירה אמיתית של הגוף.
+      כאן הגוף מתחיל את העבודה — הנשימה מתרחבת והאנרגיה עולה, לא בכוח, אלא מתוך הקשבה.
+    </p>
+
   </div>
 </div>
 
@@ -837,35 +895,6 @@
 </div>
 
 
-<!-- VISUAL: DESERT — replaced by section 2 bg -->
-
-
-<!-- ════════ התרגול ════════ -->
-<div class="bg-sand">
-  <div class="s">
-    <span class="eyebrow fade">גוף, תרגול ומה שקורה ביניהם</span>
-    <h2 class="fade fd1">הלב של הריטריט הוא התרגול</h2>
-    <p class="fade fd1">
-      אנחנו נתרגל כל יום — בבוקר ובשקיעה, מול הים.
-      התרגול נשען על עולמות האשטנגה, אבל לא נשאר בתוך צורה קבועה.
-    </p>
-    <p class="fade fd2">
-      ניכנס לתוך מנחים ותנוחות,
-      נחקור איך הגוף נע,
-      איך נשימה משנה תנועה,
-      ואיך אפשר לפגוש את התרגול מבפנים — לא רק לבצע אותו.
-    </p>
-    <p class="fade fd2">
-      יש כאן דיוק, אבל גם הקשבה.
-      יש חקירה, אבל בלי למהר להגיע.
-    </p>
-    <p class="fade fd3">
-      נשלב עבודה עם מגע ותמיכות,
-      כדי לאפשר לגוף לחוות עוד אפשרות —
-      להיפתח, ללמוד, לנוע אחרת.
-    </p>
-  </div>
-</div>
 
 
 <!-- ════════ עומק ════════ -->
@@ -969,25 +998,6 @@
       רגע של עצירה, של התכנסות,
       של העמקה של מה שנפתח במהלך הימים.
     </p>
-  </div>
-</div>
-
-
-<!-- ════════ מה כולל ════════ -->
-<div class="bg-sand">
-  <div class="s">
-    <span class="eyebrow fade">מה כולל הריטריט</span>
-    <h2 class="fade fd1">4 ימים · 3 לילות</h2>
-    <ul class="includes fade fd1">
-      <li>לינה בקאמפ על הים</li>
-      <li>3 ארוחות ביום — בוקר, בראנץ׳, ערב — בופה מגוון</li>
-      <li>קפה, תה ומים חופשי לאורך כל היום</li>
-      <li>תרגולי בוקר ושקיעה</li>
-      <li>סשני עומק, מדיטציה ופילוסופיה</li>
-      <li>סאונד הילינג וריברסינג עם נויה</li>
-      <li>יום טיול להרים</li>
-      <li>מדורה וטקס קקאו</li>
-    </ul>
   </div>
 </div>
 
