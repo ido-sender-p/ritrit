@@ -415,7 +415,7 @@
   .dt-row { display: flex; gap: 1.8rem; align-items: baseline; }
   .dt-label { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--clay); opacity: .62; min-width: 90px; flex-shrink: 0; font-family: 'Heebo', sans-serif; line-height: 1.6; }
   .dt-val { font-family: 'Frank Ruhl Libre', serif; font-size: 1rem; color: var(--cream); line-height: 1.6; }
-  .dt-val.sm { font-family: 'Heebo', sans-serif; font-size: .84rem; opacity: .5; }
+  .dt-val.sm { font-family: 'Heebo', sans-serif; font-size: .84rem; opacity: .78; }
 
   /* ── ABOUT PHOTO ── */
   .about-photo {
@@ -759,7 +759,7 @@
         <div style="padding-top:.2rem;">
           <p style="font-family:'Frank Ruhl Libre',serif;font-size:1rem;color:var(--turq);margin:0 0 .75rem;font-weight:400;">תרגול</p>
           <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.83rem;color:var(--brown);line-height:1;">
-            <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">2 תרגולי יוגה יומיים — בוקר ושקיעה</li>
+            <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">תרגולי יוגה בוקר ושקיעה</li>
             <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">אשטנגה / ויניאסה / תרגול עדין ומעמיק</li>
             <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">פראנאיאמה ופילוסופיה של היוגה</li>
             <li style="padding:.38rem 0;">תמיכה במגע — כניסה לעומק בתנוחות</li>
@@ -848,49 +848,62 @@
 </div>
 
 <!-- ════════ 2 · נויה · ריברסינג וצליל ════════ -->
-<div class="bg-dark" style="position:relative;overflow:hidden;">
-  <div style="display:grid;grid-template-columns:42% 58%;min-height:100vh;">
 
-    <!-- תמונה שמאל -->
-    <div style="position:relative;overflow:hidden;">
-      <img src="/images/img10.png" alt="נויה סאונד הילינג" loading="lazy"
-           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 28%;filter:brightness(.82) saturate(.9);">
-      <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(28,16,8,.35),transparent 50%);"></div>
-    </div>
+<!-- נויה — dark split -->
+<div style="background:#2A1508;overflow:hidden;">
+  <div style="display:grid;grid-template-columns:58% 42%;min-height:90vh;">
 
-    <!-- תוכן ימין -->
-    <div style="padding:4rem 3rem 4rem 2rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;">
-      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 80% 40%,rgba(95,168,158,.07),transparent 60%);"></div>
+    <!-- טקסט שמאל -->
+    <div style="padding:5rem 3rem 5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;">
 
       <span class="eyebrow eyebrow-turq fade">ריברסינג, צליל ומה שמעבר למילים</span>
-      <h2 class="on-dark fade fd1" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.35;margin-bottom:2rem;">מרחב שבו דברים זזים<br>בלי הרבה מילים</h2>
 
-      <p class="on-dark fade fd2" style="font-size:.95rem;line-height:2;margin-bottom:.8rem;opacity:.82;">
-        לתוך המסע הזה נכנסת גם העבודה של <strong style="font-weight:500;opacity:1;">נויה ישראלי</strong>, מטפלת בשיטת נאדר בוטו.
+      <h2 class="on-dark fade fd1" style="font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.4;margin-bottom:1.8rem;">
+        מרחב שבו דברים זזים<br>בלי הרבה מילים
+      </h2>
+
+      <p class="on-dark fade fd2" style="font-family:'Heebo',sans-serif;font-size:clamp(.95rem,2vw,1.1rem);line-height:1.65;color:rgba(248,243,234,.92);margin-bottom:.6rem;font-weight:500;">
+        נויה תוביל אותנו במסע צלילים ותפגיש אותנו עם שיטות טיפול עמוקות.
       </p>
-      <p class="on-dark fade fd2" style="font-family:'Heebo',sans-serif;font-size:clamp(.95rem,2vw,1.15rem);line-height:1.6;color:rgba(248,243,234,.95);margin-bottom:2rem;font-weight:500;letter-spacing:.01em;">
-        היא תעביר לנו חלק מהידע המטורף שלה — סשן של סאונד הילינג, שטיפה אנרגטית וריברסינג.
+      <p class="fade fd2" style="font-family:'Heebo',sans-serif;font-size:clamp(1rem,2.1vw,1.2rem);color:rgba(248,243,234,.72);margin-bottom:1.8rem;">
+        סאונד הילינג <span style="color:var(--turq);margin:0 .4rem;">·</span> שטיפה אנרגטית <span style="color:var(--turq);margin:0 .4rem;">·</span> ריברסינג
       </p>
 
-      <blockquote class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:clamp(.88rem,1.8vw,1.05rem);color:rgba(248,243,234,.75);line-height:1.9;font-weight:300;border-right:2px solid var(--turq);padding-right:1.3rem;margin:0 0 2.4rem;">
+      <blockquote class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:clamp(.88rem,1.8vw,1.05rem);color:rgba(248,243,234,.62);line-height:1.9;border-right:2px solid var(--turq);padding-right:1.2rem;margin:0 0 2rem;">
         זה מקום שבו אפשר לשחרר בלי להסביר,<br>
         ולתת למה שמבקש לעלות — לעלות.
       </blockquote>
 
-      <ul class="fade fd3" style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.88rem;color:rgba(248,243,234,.52);">
-        <li style="padding:.5rem 0;border-bottom:1px solid rgba(248,243,234,.07);display:flex;gap:1rem;align-items:baseline;">
-          <span style="color:var(--turq);font-size:.58rem;flex-shrink:0;">✦</span>
-          <span>טקס קקאו — פתיחת לב ושחרור דפוסים</span>
+      <ul class="fade fd3" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.2rem;">
+        <li style="display:flex;gap:.9rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid rgba(248,243,234,.07);font-family:'Heebo',sans-serif;font-size:.88rem;color:rgba(248,243,234,.5);">
+          <span style="color:var(--turq);font-size:.55rem;flex-shrink:0;">✦</span>טקס קקאו — פתיחת לב ושחרור דפוסים
         </li>
-        <li style="padding:.5rem 0;border-bottom:1px solid rgba(248,243,234,.07);display:flex;gap:1rem;align-items:baseline;">
-          <span style="color:var(--turq);font-size:.58rem;flex-shrink:0;">✦</span>
-          <span>זמן חופשי — מנוחה, ים וקצב איטי</span>
+        <li style="display:flex;gap:.9rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid rgba(248,243,234,.07);font-family:'Heebo',sans-serif;font-size:.88rem;color:rgba(248,243,234,.5);">
+          <span style="color:var(--turq);font-size:.55rem;flex-shrink:0;">✦</span>זמן חופשי — מנוחה, ים וקצב איטי
         </li>
-        <li style="padding:.5rem 0;display:flex;gap:1rem;align-items:baseline;">
-          <span style="color:var(--turq);font-size:.58rem;flex-shrink:0;">✦</span>
-          <span>טיולים בטבע והטמעת הדברים שנפגשנו איתם</span>
+        <li style="display:flex;gap:.9rem;align-items:baseline;padding:.45rem 0;font-family:'Heebo',sans-serif;font-size:.88rem;color:rgba(248,243,234,.5);">
+          <span style="color:var(--turq);font-size:.55rem;flex-shrink:0;">✦</span>טיולים בטבע והטמעת הדברים שנפגשנו איתם
         </li>
       </ul>
+
+    </div>
+
+    <!-- תמונה + כיתוב ימין -->
+    <div style="display:flex;flex-direction:column;">
+      <div style="flex:1;position:relative;overflow:hidden;">
+        <img src="/images/img10.png" alt="נויה סאונד הילינג" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 18%;filter:brightness(.88) saturate(.9);">
+      </div>
+      <div style="padding:2rem 2rem 2.2rem;">
+        <p class="fade" style="font-family:'Frank Ruhl Libre',serif;line-height:1.7;margin:0 0 .6rem;">
+          <span style="font-size:clamp(1.05rem,2.1vw,1.2rem);color:rgba(248,243,234,.88);font-weight:500;">נויה ישראלי</span>
+          <span style="font-style:italic;font-size:clamp(.9rem,1.8vw,1rem);color:rgba(248,243,234,.52);margin-right:.5rem;">מטפלת בשיטת נאדר בוטו. מחזיקה מרחבי סאונד הילינג וריברסינג.</span>
+        </p>
+        <p class="fade" style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:clamp(1rem,2vw,1.15rem);line-height:1.85;color:rgba(248,243,234,.55);margin:0;">
+          עובדת עם הגוף, הנשימה ומה שמתחת לפני השטח.<br>
+          פותחת מרחב שבו שכבות עמוקות יכולות לעלות ולהשתחרר.
+        </p>
+      </div>
     </div>
 
   </div>
@@ -922,7 +935,7 @@
 
       <div style="border-top:1px solid rgba(160,114,74,.2);padding-top:1.4rem;">
         <div style="font-family:'Frank Ruhl Libre',serif;font-size:1.05rem;color:var(--brown);margin-bottom:.5rem;font-weight:600;">האוכל</div>
-        <p style="font-size:.88rem;line-height:1.9;color:var(--text);opacity:.75;margin:0;">ארוחת בוקר, בראנץ וארוחת ערב — מפנקת, בריאה ומזינה. מים, תה וקפה חופשי כל היום.</p>
+        <p style="font-size:.88rem;line-height:1.9;color:var(--text);opacity:.75;margin:0;">ארוחת בוקר, בראנץ וארוחת ערב. מפנקות, בריאות ומזינות. מים, תה וקפה חופשי כל היום.</p>
       </div>
 
       <div style="border-top:1px solid rgba(160,114,74,.2);padding-top:1.4rem;">
@@ -966,6 +979,230 @@
 </div>
 
 
+<!-- ════════ למי זה מתאים ════════ -->
+<div style="background:var(--cream);">
+  <div class="s" style="padding-top:4rem;padding-bottom:4.5rem;max-width:600px;text-align:center;">
+
+    <span class="eyebrow fade" style="text-align:center;display:block;font-size:clamp(.85rem,1.8vw,1rem);letter-spacing:.18em;"><mark style="background:rgba(160,114,74,.18);color:inherit;padding:.15em .6em;border-radius:1px;">למי זה מתאים</mark></span>
+
+    <ul class="fade fd1" style="list-style:none;padding:0;margin:2.2rem 0 0;display:flex;flex-direction:column;gap:.85rem;text-align:right;">
+      <li style="display:flex;align-items:flex-start;gap:.85rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.88rem,1.9vw,1rem);color:var(--brown);line-height:1.65;word-spacing:.12em;"><span style="flex-shrink:0;width:.5rem;height:.5rem;border-radius:50%;border:1.5px solid var(--clay);display:block;margin-top:.4em;"></span>למתרגלות יוגה מכל הרמות, מי שרוצה להעמיק גם במה שמעבר לתנוחות.</li>
+      <li style="display:flex;align-items:flex-start;gap:.85rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.88rem,1.9vw,1rem);color:var(--brown);line-height:1.65;word-spacing:.12em;"><span style="flex-shrink:0;width:.5rem;height:.5rem;border-radius:50%;border:1.5px solid var(--clay);display:block;margin-top:.4em;"></span>למי שמרגישה צורך לעצור רגע. להאט, להקשיב, ולהתקרב לעצמה.</li>
+      <li style="display:flex;align-items:flex-start;gap:.85rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.88rem,1.9vw,1rem);color:var(--brown);line-height:1.65;word-spacing:.12em;"><span style="flex-shrink:0;width:.5rem;height:.5rem;border-radius:50%;border:1.5px solid var(--clay);display:block;margin-top:.4em;"></span>למי שמבקשת מרחב, שקט של ים, קצב אחר, וזמן להיות.</li>
+      <li style="display:flex;align-items:flex-start;gap:.85rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.88rem,1.9vw,1rem);color:var(--brown);line-height:1.65;word-spacing:.12em;"><span style="flex-shrink:0;width:.5rem;height:.5rem;border-radius:50%;border:1.5px solid var(--clay);display:block;margin-top:.4em;"></span>למי שרוצה להיות לבד, ובתוך זה להיות יחד.</li>
+    </ul>
+    <p class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:clamp(.95rem,1.8vw,1.1rem);color:var(--clay);opacity:.75;margin:2rem 0 0;line-height:2;">
+      אפשר להגיע לבד, או בכל הרכב.<br>
+      ואם אחת מהשורות מדברת אליך, את איתנו.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- ════════ לוז ════════ -->
+<div style="background:var(--sand);">
+  <div class="s" style="padding-top:5rem;padding-bottom:5rem;max-width:820px;">
+
+    <span class="eyebrow fade" style="text-align:center;display:block;">4 ימים של מסע</span>
+    <h2 class="fade fd1" style="text-align:center;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.5rem;">הלוז</h2>
+    <p class="fade fd1" style="text-align:center;font-family:'Frank Ruhl Libre',serif;font-style:italic;color:var(--clay);opacity:.7;font-size:.95rem;margin-bottom:1.5rem;">יכול להשתנות</p>
+    <p class="fade fd1" style="text-align:center;font-size:.88rem;line-height:2;color:var(--brown);opacity:.7;max-width:560px;margin:0 auto 4rem;">
+      הלוז קיים — אבל כלום לא חובה.<br>
+      אם תרגישו שאתן צריכות זמן לעצמכן, תרגישו בנוח.<br>
+      אנחנו כאן להחזיק ולהכיל את המרחב, ואת כל מה שיביא איתו.
+    </p>
+
+    <!-- יום 1 -->
+    <div class="fade fd1" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
+        <span style="color:var(--turq);font-size:.75rem;">✺</span>
+        <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--brown);margin:0;font-weight:600;">יום 1 — הגעה</h3>
+        <div style="flex:1;height:1px;background:rgba(160,114,74,.18);"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.1rem;">
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">עד 13:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">הגעה לגבול</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">15:30–17:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">הגעה והתמקמות</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">ים, קפה, נשימה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">17:30–18:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">תרגול פתיחה — שקיעה</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">קרקוע, תנועה עדינה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">19:00–19:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת ערב</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">20:00–21:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">כניסה יחד למסע</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">מעגל ראשון — היכרות, כוונה ושיחת פתיחה</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- יום 2 -->
+    <div class="fade fd2" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
+        <span style="color:var(--turq);font-size:.75rem;">✺</span>
+        <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--brown);margin:0;font-weight:600;">יום 2 — תנועה | עומק | פתיחה</h3>
+        <div style="flex:1;height:1px;background:rgba(160,114,74,.18);"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.1rem;">
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">05:45–06:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">זריחה בסיני + מדיטציה</span><br><span style="font-size:.8rem;color:var(--clay);opacity:.8;line-height:1.7;">לבחירה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">06:45–08:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">תרגול בוקר — ראשון של הריטריט</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">עבודה על יציבות ונינוחות בתוך המנח</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">08:45–09:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת בוקר</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">10:00–12:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">זמן חופשי</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">ים · שנורקל · מנוחה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">12:00–12:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">מדיטציית התבוננות</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">12:45–13:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">בראנץ׳</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">14:30–15:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">עבודת נשימה — Rebirthing</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">נויה ישראלי מנחה ומעבירה את הסשן</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">15:30–16:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">מנוחה / אינטגרציה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">16:30–17:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">סשן עומק</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">יסודות הפילוסופיה של היוגה וכיצד היא נוגעת בנו בחיי היום יום</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">17:30–17:45</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">הפסקה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">17:45–19:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">תרגול שקיעה — הרפיה וצלילים</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">תרגול מלווה בצלילים של נויה, לסיום בסאונד הילינג עמוק</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">20:00–21:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת ערב</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">21:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">מדורה על החוף</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">יין, גיטרה וכוכבים — ערב ראשון אמיתי בסיני</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- יום 3 -->
+    <div class="fade fd2" style="margin-bottom:3.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
+        <span style="color:var(--turq);font-size:.75rem;">✺</span>
+        <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--brown);margin:0;font-weight:600;">יום 3 — מגע | ים | ערב אחרון</h3>
+        <div style="flex:1;height:1px;background:rgba(160,114,74,.18);"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.1rem;">
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">06:30–09:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">תרגול בוקר ארוך</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">מגע ותמיכות מעולמות האשטנגה · עבודה בזוגות · העמקה בתנוחות הפוכות</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">09:00–10:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת בוקר</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">10:00–12:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">זמן חופשי</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">ים · מנוחה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">12:30–13:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">בראנץ׳</span></div>
+        </div>
+
+        <!-- 2 אופציות -->
+        <div style="margin:.8rem 0;padding:.6rem 1rem;background:rgba(160,114,74,.07);border-radius:3px;border-right:2px solid rgba(160,114,74,.25);">
+          <span style="font-size:.78rem;color:var(--clay);font-family:'Frank Ruhl Libre',serif;font-style:italic;">✺ בהתאם למזג האוויר — אחת משתי האופציות</span>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">אופציה א׳</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">בלו הול — חצי יום</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">שנורקלינג במקום מהיפים בסיני</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">אופציה ב׳</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">נסיעה להרים</span></div>
+        </div>
+
+        <!-- ערב -->
+        <div style="margin:.8rem 0;padding:.6rem 1rem;background:rgba(160,114,74,.07);border-radius:3px;border-right:2px solid rgba(160,114,74,.25);">
+          <span style="font-size:.78rem;color:var(--clay);font-family:'Frank Ruhl Libre',serif;font-style:italic;">✺ ערב אחרון למסע</span>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">17:30–18:15</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">טקס קקאו</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">19:00–20:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת ערב</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">20:00–21:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">סדנת תנועה</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">נותנת משמעות למסע דרך הגוף</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">21:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">מדורה וזמן חופשי</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- יום 4 -->
+    <div class="fade fd3">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
+        <span style="color:var(--turq);font-size:.75rem;">✺</span>
+        <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--brown);margin:0;font-weight:600;">יום 4 — סגירה | אינטגרציה</h3>
+        <div style="flex:1;height:1px;background:rgba(160,114,74,.18);"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.1rem;">
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">06:30–08:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">תרגול בוקר</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">תנועה עדינה, נשימה, איסוף</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">08:15–09:15</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">ארוחת בוקר</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">09:15–10:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">מעגל סיום ואינטגרציה</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">סיכום, שיתוף ותהליכי סגירה</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">11:00</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">סיום</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">עם כל מה שנלקח משם</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;">
+          <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">11:30</span>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">הסעה לגבול</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">מי שרוצה להישאר יותר — מוזמנת לחזור עצמאית לגבול</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 <!-- ════════ המחזיקות ════════ -->
 <div class="bg-sand">
   <div style="padding:7rem 2rem; max-width:1000px; margin:0 auto;">
@@ -977,19 +1214,22 @@
         <h2>מאי אנגליסטר</h2>
         <p class="facilitator-role">מורה בכירה ליוגה · מטפלת במגע</p>
         <p>
-          הגוף, בעיניה, אינו כלי — הוא המקום שבו הכל מתרחש.
-          הדרך שלה לא התחילה בסטודיו.
-          היא התחילה ברגע שהגוף עצר אותה, ואילץ אותה להקשיב.
+          הייתי בסיני ומצאתי שם שקט.
+          לא שקט רגיל. יש למקום הזה איכות נדירה, משהו שמטעין ושממלא בדרך שאני לא מכירה ממקום אחר.
+          מהרגע הזה נולד הריטריט, מהרצון להעביר את זה הלאה.
         </p>
         <p>
-          מאז, היא הולכת בדרך שמאמינה בדבר אחד:
-          שינוי אמיתי לא מגיע דרך הבנה —
-          הוא מגיע דרך חוויה.
+          אני מאי. מורה ליוגה ומטפלת במגע.
+          הגעתי ליוגה לא דרך הסטודיו, אלא דרך תקופה שבה הגוף עצר אותי ואילץ אותי להקשיב.
+          מאז אני מלווה נשים בתהליכים של עבודה עם הגוף, שחרור דפוסים וחזרה לעצמן.
         </p>
         <p>
-          העבודה שלה משלבת את הדיוק של האשטנגה עם הרכות של המגע,
-          ומזמינה כל אחת להיפגש עם עצמה,
-          מתוך הגוף פנימה.
+          היוגה בשבילי היא הפנס. המקום שאני תמיד מצליחה לחזור בו לעצמי, לחקר, ולשחרור.
+          אני מאמינה שהשינוי האמיתי לא קורה דרך הבנה, הוא קורה דרך חוויה.
+        </p>
+        <p>
+          אני רואה את הריטריט הזה כהזדמנות נדירה להגיע בלי ציפיות.
+          לתרגל, לגעת במקומות עמוקים, ולתת לילדה שבך לצאת החוצה.
         </p>
       </div>
       <div class="facilitator-photo">
@@ -1006,290 +1246,177 @@
       </div>
       <div>
         <h2>נויה ישראלי</h2>
-        <p class="facilitator-role">נאדר בוטו · צלילים מרפאים · מדיטציה</p>
+        <p class="facilitator-role">נאדר בוטו · סאונד הילינג · שטיפה אנרגטית · ריברסינג</p>
         <p>
-          הצליל, עבורה, הוא שפה שקדמה לכל מילה.
-          העבודה שלה מגיעה ממקום של ידיעה עמוקה —
-          שהגוף יודע לשחרר, כשנותנים לו את הסביבה הנכונה.
+          אני עובדת עם הגוף, עם הנשימה, ועם מה שמתחת לפני השטח.
+          השיטות שאני מביאה צמחו משנים של למידה והכשרה בתחומים שונים של עבודה אנרגטית וגופנית.
         </p>
         <p>
-          דרך קערות שירה, ריברסינג, שטיפה אנרגטית
-          וטכניקות מדיטציה שונות,
-          היא פותחת מרחב שמאפשר לשכבות עמוקות לעלות ולהשתחרר.
+          אני מוסמכת בשיטת נאדר בוטו, שיטת טיפול עמוקה שעובדת עם מסלולי אנרגיה בגוף ומאפשרת שחרור של דפוסים שהגוף מחזיק לאורך זמן.
+          לצד זה, אני מחזיקה מרחבי סאונד הילינג דרך קערות שירה, ועובדת עם שטיפה אנרגטית וריברסינג כשיטות לפתיחה ושחרור.
         </p>
         <p>
-          נויה עובדת עם הגוף, עם הנשימה,
-          ועם מה שמתחת לפני השטח.
+          הצליל בשבילי הוא שפה שקדמה לכל מילה.
+          הוא מגיע למקומות שמילים לא מצליחות, ומאפשר לשכבות עמוקות לעלות ולהשתחרר.
+          אין כאן תהליך שצריך להבין. רק להיות נוכחת, ולתת לגוף לעשות את שלו.
         </p>
       </div>
     </div>
   </div>
 </div>
 
+<!-- ════════ הרשמה ════════ -->
+<div style="background:var(--cream);">
+  <div style="max-width:780px;margin:0 auto;padding:5.5rem 2rem;">
 
+    <span class="eyebrow fade" style="display:block;text-align:center;">הרשמה לריטריט</span>
+    <h2 class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--brown);text-align:center;margin:.6rem 0 .4rem;font-weight:600;">4 ימים · 3 לילות · מסע עומק בסיני</h2>
+    <p class="fade fd1" style="text-align:center;font-family:'Heebo',sans-serif;font-size:.9rem;color:var(--clay);letter-spacing:.08em;margin-bottom:3rem;">4–7 ביוני &nbsp;·&nbsp; ביר סוור, קאמפ קזבלנקה</p>
 
+    <!-- כולל -->
+    <div class="fade fd2" style="background:var(--sand);border-radius:4px;padding:2rem 2.2rem;margin-bottom:3rem;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 1.1rem;">ההרשמה כוללת</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;">
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>לינה בקאמפ על הים</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>3 ארוחות מלאות ביום · קפה, תה ומים חופשי</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>תרגולי יוגה בוקר ושקיעה</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>סשני עומק · פילוסופיה · נשימה · מדיטציה</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>סאונד הילינג · ריברסינג · שטיפה אנרגטית עם נויה</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>יום טיול להרים · מדורה · טקס קקאו</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>הסעה מסודרת מהגבול לקאמפ וחזרה</li>
+      </ul>
+      <p style="font-family:'Heebo',sans-serif;font-size:.8rem;color:var(--clay);opacity:.65;margin:1.2rem 0 0;">לא כולל: מכס, מעבר גבול, ביטוח נסיעות</p>
+    </div>
 
-<!-- ════════ עומק ════════ -->
-<div class="bg-dark">
-  <div class="s">
-    <span class="eyebrow eyebrow-turq fade">עומק, אמונות והמסע הפנימי</span>
-    <h2 class="on-dark fade fd1">לראות דברים אחרת</h2>
-    <p class="on-dark fade fd1">
-      במהלך הימים ניכנס גם לשכבות הפנימיות יותר.
-      נפגוש אמונות מגבילות, דפוסים והרגלים —
-      לא דרך ניתוח, אלא דרך חוויה.
-    </p>
-    <p class="on-dark fade fd2">
-      נשלב תכנים מעולם הפילוסופיה של היוגה,
-      ונחקור איך הם פוגשים אותנו בתוך החיים עצמם.
-    </p>
-    <p class="on-dark fade fd2">
-      דרך תרגול, כתיבה, שיחה והתבוננות,
-      נפתח מרחב שבו אפשר לראות דברים אחרת —
-      לא כי צריך להשתנות,
-      אלא כי משהו נהיה ברור יותר.
-    </p>
-  </div>
-</div>
+    <!-- כרטיסי מחיר -->
+    <p class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 1.4rem;">מחירים</p>
+    <div class="fade fd2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1rem;">
 
-
-
-
-
-
-<!-- COLLAGE -->
-<div style="width:100%;overflow:hidden;line-height:0;">
-  <img src="/images/img1.jpg" alt="" loading="lazy" style="width:100%;display:block;">
-</div>
-
-
-<!-- ════════ ריברסינג ════════ -->
-<div class="bg-cream">
-  <div class="s">
-    <span class="eyebrow fade">ריברסינג, צליל ומה שמעבר למילים</span>
-    <h2 class="fade fd1">מרחב שבו דברים זזים בלי הרבה מילים</h2>
-    <p class="fade fd1">
-      לתוך המסע הזה נכנסת גם העבודה של נויה —
-      סשנים של ריברסינג, סאונד הילינג ושטיפה אנרגטית.
-    </p>
-    <p class="fade fd2">
-      זה מקום שבו אפשר לשחרר בלי להסביר,
-      ולתת למה שמבקש לעלות — לעלות.
-    </p>
-  </div>
-</div>
-
-
-<!-- ════════ המקום ════════ -->
-<div class="bg-sand">
-  <div class="s">
-    <span class="eyebrow fade">המקום והקסם של סיני</span>
-    <h2 class="fade fd1">ביר סוור — קאמפ קזבלנקה</h2>
-    <p class="fade fd1">
-      חיים על הים.
-      הרבה שמיים.
-      הרים מסביב.
-    </p>
-    <p class="fade fd2">
-      אבל מה שקורה שם הוא מעבר למה שרואים.
-    </p>
-    <p class="fade fd2">
-      יש רגעים שאת פשוט יושבת מול הים
-      ומשהו נרגע.
-      לא כי עשית משהו,
-      לא כי הבנת משהו,
-      אלא כי הסביבה מאפשרת.
-    </p>
-    <p class="fade fd3">
-      הימים שם נפתחים אחרת.
-      יש זמן. יש מרחב. יש שקט מסוג אחר.
-      החיבור לאנשים נהיה פשוט יותר.
-      השיחות עמוקות יותר בלי מאמץ.
-      והגוף — פשוט מתחיל להרגיש.
-    </p>
-  </div>
-</div>
-
-
-<!-- VISUAL: NIGHT / FIRE -->
-<div class="visual v-night"></div>
-
-
-<!-- ════════ יום טיול ════════ -->
-<div class="bg-cream">
-  <div class="s">
-    <span class="eyebrow fade">יום טיול</span>
-    <h2 class="fade fd1">ההרים, המדורה, הקקאו</h2>
-    <p class="fade fd1">
-      באחד הימים נצא אל ההרים.
-      מרחב אחר, פתוח ושקט,
-      שמאפשר המשך של התהליך מתוך תנועה.
-    </p>
-    <p class="fade fd2">
-      בערב — מדורה וטקס קקאו.
-      רגע של עצירה, של התכנסות,
-      של העמקה של מה שנפתח במהלך הימים.
-    </p>
-  </div>
-</div>
-
-
-<!-- ════════ לינה ════════ -->
-<div class="bg-cream">
-  <div class="s">
-    <span class="eyebrow fade">הלינה והמרחב</span>
-    <h2 class="fade fd1">פשוטה, נעימה, קרובה לים</h2>
-    <p class="muted fade fd1">ניתן להגיע לבד או עם שותפה.</p>
-    <div class="accom-grid fade fd2">
-      <div class="accom-item">
-        <h3>חדר עם מזגן, שירותים ומקלחת פרטיים</h3>
-        <p>תוספת 40₪ ללילה</p>
+      <!-- מוקדמת -->
+      <div style="border:2px solid var(--clay);border-radius:4px;padding:1.8rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;background:rgba(160,114,74,.06);position:relative;">
+        <span style="position:absolute;top:-1px;right:50%;transform:translateX(50%);background:var(--clay);color:var(--cream);font-family:'Heebo',sans-serif;font-size:.68rem;letter-spacing:.1em;padding:.25em .9em;border-radius:0 0 3px 3px;">6 הנרשמות הראשונות</span>
+        <span style="font-family:'Frank Ruhl Libre',serif;font-size:2rem;color:var(--brown);font-weight:700;margin-top:.6rem;">1,850 ₪</span>
+        <span style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.7;">הרשמה מוקדמת</span>
+        <button onclick="openReg('הרשמה מוקדמת — 1,850 ₪')" style="margin-top:.6rem;width:100%;padding:.65rem 1rem;background:var(--clay);color:var(--cream);border:none;border-radius:2px;font-family:'Heebo',sans-serif;font-size:.88rem;cursor:pointer;letter-spacing:.06em;">שמירת מקום</button>
       </div>
-      <div class="accom-item">
-        <h3>חדר עם מזגן ושירותים משותפים</h3>
-        <p>מחיר הבסיס</p>
+
+      <!-- עד 18.5 -->
+      <div style="border:1px solid rgba(160,114,74,.3);border-radius:4px;padding:1.8rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;">
+        <span style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.7;margin-top:.4rem;">עד 18.5</span>
+        <span style="font-family:'Frank Ruhl Libre',serif;font-size:2rem;color:var(--brown);font-weight:700;">2,000 ₪</span>
+        <span style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.7;">מחיר מוקדם</span>
+        <button onclick="openReg('מחיר עד 18.5 — 2,000 ₪')" style="margin-top:.6rem;width:100%;padding:.65rem 1rem;background:transparent;color:var(--clay);border:1px solid rgba(160,114,74,.5);border-radius:2px;font-family:'Heebo',sans-serif;font-size:.88rem;cursor:pointer;letter-spacing:.06em;">שמירת מקום</button>
       </div>
-      <div class="accom-item">
-        <h3>חושה עם מאוורר</h3>
-        <p>הנחה של 30₪ ללילה</p>
+
+      <!-- מלא -->
+      <div style="border:1px solid rgba(160,114,74,.3);border-radius:4px;padding:1.8rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;">
+        <span style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.7;margin-top:.4rem;">מחיר מלא</span>
+        <span style="font-family:'Frank Ruhl Libre',serif;font-size:2rem;color:var(--brown);font-weight:700;">2,100 ₪</span>
+        <span style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.7;"> </span>
+        <button onclick="openReg('מחיר מלא — 2,100 ₪')" style="margin-top:.6rem;width:100%;padding:.65rem 1rem;background:transparent;color:var(--clay);border:1px solid rgba(160,114,74,.5);border-radius:2px;font-family:'Heebo',sans-serif;font-size:.88rem;cursor:pointer;letter-spacing:.06em;">שמירת מקום</button>
       </div>
     </div>
-    <p class="muted fade fd3" style="margin-top:2rem;">
-      במקום מסעדה עם אוכל עשיר ומזין —
-      3 ארוחות ביום, קפה, תה ומים חופשי לאורך כל היום.
-    </p>
-  </div>
-</div>
+    <p class="fade fd3" style="font-family:'Heebo',sans-serif;font-size:.78rem;color:var(--clay);opacity:.65;margin-bottom:3rem;">המחיר כולל לינה בחדר עם מזגן ושירותים ומקלחת משותפים</p>
 
-
-<!-- ════════ אווירה ════════ -->
-<div class="bg-dark">
-  <div class="s">
-    <span class="eyebrow eyebrow-turq fade">האווירה</span>
-    <h2 class="on-dark fade fd1">מרחב אמיתי</h2>
-    <p class="on-dark fade fd1">
-      זה לא ריטריט "רוחני" במובן הקלישאתי.
-    </p>
-    <p class="on-dark fade fd2">
-      חיבור פשוט.
-      נשים יחד.
-      תרגול, ים, אוכל, שיחות, מדורה, שקט.
-    </p>
-    <p class="on-dark fade fd2">
-      אפשר להגיע לבד, עם חברה, עם אמא —
-      כל אחת מהמקום שלה.
-    </p>
-    <p class="on-dark fade fd3">
-      ומה שנבנה שם,
-      נבנה מתוך מפגש אמיתי.
-    </p>
-  </div>
-</div>
-
-
-<!-- VISUAL: MORNING -->
-<div class="visual short">
-  <img src="/images/img6.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;">
-</div>
-
-
-<!-- ════════ הגעה ════════ -->
-<div class="bg-sand">
-  <div class="s">
-    <span class="eyebrow fade">הגעה</span>
-    <h2 class="fade fd1">גבול טאבה · 30 דקות</h2>
-    <p class="fade fd1">
-      הגעה עצמאית לגבול טאבה.
-      משם ניתן להצטרף להסעה מסודרת הלוך-חזור בתוספת תשלום,
-      או להגיע באופן עצמאי.
-    </p>
-    <p class="muted fade fd2">
-      הקאמפ נמצא כ-30 דקות מהגבול.
-      ביטוח נסיעות ומעבר גבול אינם כלולים במחיר.
-    </p>
-  </div>
-</div>
-
-
-<!-- ════════ למי זה מתאים ════════ -->
-<div class="bg-dark">
-  <div class="s s-center">
-    <span class="eyebrow eyebrow-turq fade">למי זה מתאים</span>
-    <p class="poem on-dark fade fd1">
-      למי שמרגישה קריאה לעצור ולהיכנס פנימה.<br>
-      למי שמתחברת לעבודה דרך הגוף.<br>
-      למי שמבקשת להעמיק בתרגול שלה —<br>
-      ולפגוש את עצמה באופן כן וישיר.
-    </p>
-    <div class="divider fade fd2"></div>
-    <p class="muted on-dark fade fd3" style="text-align:center; color:var(--sand);">אין צורך בניסיון קודם</p>
-  </div>
-</div>
-
-
-<!-- ════════ עליי ════════ -->
-<div class="bg-cream">
-  <div class="s s-center">
-    <span class="eyebrow fade">עליי</span>
-    <div class="facilitator-photo fade fd1" style="max-width:260px; margin:0 auto 3rem;">
-      <img src="/images/may.png" alt="מאי אנגליסטר" loading="lazy" style="aspect-ratio:3/4;">
-    </div>
-    <h2 class="fade fd1">מאי אנגליסטר</h2>
-    <p class="fade fd2">
-      הולכת בדרך היוגה, מחזיקה מרחבים ומטפלת במגע.
-    </p>
-    <p class="fade fd2">
-      הגעתי אל הדרך הזו מתוך מפגש עם הגוף בתקופה של שיקום,
-      ומשם התפתחה חקירה מתמשכת של תנועה, הקשבה ונוכחות.
-    </p>
-    <p class="fade fd3">
-      העבודה שאני מביאה משלבת תרגול פיזי עם חקירה פנימית,
-      ומבוססת על ההבנה ששינוי עמוק מתרחש דרך חוויה ישירה.
-    </p>
-    <p class="fade fd3">
-      במרחבים שאני מחזיקה יש דגש על דיוק,
-      ועל האפשרות להישאר בתוך תהליך,
-      בקצב אישי ולא מוכתב.
-    </p>
-  </div>
-</div>
-
-
-<!-- ════════ PRICE ════════ -->
-<div class="price-wrap">
-  <div style="max-width:660px; margin:0 auto;">
-    <span class="price-label fade">6 הנרשמות הראשונות</span>
-    <span class="price-main fade fd1">1,800 ₪</span>
-    <span class="price-reg fade fd1">לאחר מכן — 2,000 ₪</span>
-    <div class="details-table fade fd2">
-      <div class="dt-row">
-        <span class="dt-label">תאריך</span>
-        <span class="dt-val">4–7 ביוני</span>
-      </div>
-      <div class="dt-row">
-        <span class="dt-label">מיקום</span>
-        <span class="dt-val">ביר סוור, סיני</span>
-      </div>
-      <div class="dt-row">
-        <span class="dt-label">קבוצה</span>
-        <span class="dt-val">ריטריט אינטימי עד 16 משתתפות</span>
-      </div>
-      <div class="dt-row">
-        <span class="dt-label">כולל</span>
-        <span class="dt-val sm">לינה, אוכל מלא, כל התכנים</span>
-      </div>
-      <div class="dt-row">
-        <span class="dt-label">לא כולל</span>
-        <span class="dt-val sm">מעבר גבול, ביטוח, הסעה</span>
+    <!-- שדרוגי לינה -->
+    <div class="fade fd2" style="border-top:1px solid rgba(160,114,74,.18);padding-top:2rem;margin-bottom:2rem;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 1.1rem;">שדרוגים והתאמות לינה</p>
+      <div style="display:flex;flex-direction:column;gap:.6rem;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
+          <span style="font-family:'Frank Ruhl Libre',serif;font-size:.95rem;color:var(--brown);">חדר עם שירותים ומקלחת פרטיים</span>
+          <span style="font-family:'Heebo',sans-serif;font-size:.82rem;color:var(--clay);">+40₪ ללילה &nbsp;·&nbsp; בזוג — 20₪ לאחת</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;">
+          <span style="font-family:'Frank Ruhl Libre',serif;font-size:.95rem;color:var(--brown);">חושה עם מאוורר</span>
+          <span style="font-family:'Heebo',sans-serif;font-size:.82rem;color:var(--clay);">-30₪ ללילה</span>
+        </div>
       </div>
     </div>
+
+    <!-- תשלום -->
+    <div class="fade fd2" style="border-top:1px solid rgba(160,114,74,.18);padding-top:2rem;margin-bottom:2rem;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 .8rem;">תשלום והרשמה</p>
+      <p style="font-family:'Heebo',sans-serif;font-size:.9rem;color:var(--text);line-height:1.75;margin:0 0 .4rem;">לשמירת מקום יש להעביר מקדמה של <strong>600 ₪</strong>.</p>
+      <p style="font-family:'Heebo',sans-serif;font-size:.9rem;color:var(--text);line-height:1.75;margin:0;">יתרת התשלום תועבר עד ___ ימים לפני הריטריט.</p>
+    </div>
+
+    <!-- ביטולים -->
+    <div class="fade fd2" style="border-top:1px solid rgba(160,114,74,.18);padding-top:2rem;margin-bottom:2rem;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 .8rem;">מדיניות ביטולים</p>
+      <div style="display:flex;flex-direction:column;gap:.4rem;">
+        <p style="font-family:'Heebo',sans-serif;font-size:.88rem;color:var(--text);line-height:1.7;margin:0;">ביטול עד 30 ימים לפני הריטריט — החזר מלא בניכוי מקדמה.</p>
+        <p style="font-family:'Heebo',sans-serif;font-size:.88rem;color:var(--text);line-height:1.7;margin:0;">ביטול עד 14 ימים לפני — החזר 50% מהסכום ששולם.</p>
+        <p style="font-family:'Heebo',sans-serif;font-size:.88rem;color:var(--text);line-height:1.7;margin:0;">ביטול פחות מ-14 ימים לפני — ללא החזר, אלא אם נמצאת משתתפת מחליפה.</p>
+        <p style="font-family:'Heebo',sans-serif;font-size:.88rem;color:var(--text);line-height:1.7;margin:0;">ביטול מצד המארגנת — החזר מלא.</p>
+      </div>
+    </div>
+
+    <!-- ביטוח -->
+    <div class="fade fd3" style="border-top:1px solid rgba(160,114,74,.18);padding-top:1.5rem;">
+      <p style="font-family:'Heebo',sans-serif;font-size:.8rem;color:var(--text);opacity:.55;line-height:1.8;margin:0;">כל משתתפת מחויבת בביטוח נסיעות אישי בתוקף הכולל פעילות יוגה/ספורט. ההשתתפות בריטריט, בתרגולים, בטיול ובכל הפעילויות היא באחריות המשתתפת ובהתאם למצבה הבריאותי.</p>
+    </div>
+
   </div>
 </div>
 
+<!-- ════════ מודאל הרשמה ════════ -->
+<dialog id="reg-modal" style="border:none;border-radius:4px;padding:2.5rem;max-width:420px;width:90%;background:var(--cream);direction:rtl;box-shadow:0 20px 60px rgba(28,16,8,.18);">
+  <form method="dialog" onsubmit="return false;">
+    <button onclick="document.getElementById('reg-modal').close()" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--clay);line-height:1;">✕</button>
+    <p id="reg-tier-label" style="font-family:'Frank Ruhl Libre',serif;font-size:1rem;color:var(--clay);margin:0 0 1.8rem;"></p>
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <div>
+        <label style="font-family:'Heebo',sans-serif;font-size:.78rem;letter-spacing:.12em;color:var(--clay);display:block;margin-bottom:.4rem;">שם מלא</label>
+        <input id="reg-name" type="text" placeholder="שם מלא" style="width:100%;padding:.7rem .9rem;border:1px solid rgba(160,114,74,.35);border-radius:2px;background:#fff;font-family:'Heebo',sans-serif;font-size:.95rem;color:var(--dark);direction:rtl;box-sizing:border-box;">
+      </div>
+      <div>
+        <label style="font-family:'Heebo',sans-serif;font-size:.78rem;letter-spacing:.12em;color:var(--clay);display:block;margin-bottom:.4rem;">טלפון</label>
+        <input id="reg-phone" type="tel" placeholder="05X-XXXXXXX" style="width:100%;padding:.7rem .9rem;border:1px solid rgba(160,114,74,.35);border-radius:2px;background:#fff;font-family:'Heebo',sans-serif;font-size:.95rem;color:var(--dark);direction:ltr;text-align:right;box-sizing:border-box;">
+      </div>
+    </div>
+    <button onclick="sendRegWhatsApp()" style="margin-top:1.5rem;width:100%;padding:.8rem 1rem;background:var(--clay);color:var(--cream);border:none;border-radius:2px;font-family:'Heebo',sans-serif;font-size:.95rem;cursor:pointer;letter-spacing:.06em;">שלחי לי פרטים בוואטסאפ ✦</button>
+    <p style="font-family:'Heebo',sans-serif;font-size:.72rem;color:var(--clay);opacity:.6;text-align:center;margin:.8rem 0 0;">תפני ישירות לוואטסאפ — נחזור אליך בהקדם</p>
+  </form>
+</dialog>
+
+<script>
+var _regTier = '';
+function openReg(tier) {
+  _regTier = tier;
+  document.getElementById('reg-tier-label').textContent = tier;
+  document.getElementById('reg-name').value = '';
+  document.getElementById('reg-phone').value = '';
+  document.getElementById('reg-modal').showModal();
+}
+function sendRegWhatsApp() {
+  var name = document.getElementById('reg-name').value.trim();
+  var phone = document.getElementById('reg-phone').value.trim();
+  if (!name || !phone) { alert('נא למלא שם וטלפון'); return; }
+  var msg = encodeURIComponent('היי מאי! אני רוצה להירשם לריטריט מסע אל הלב 🌿
+
+שם: ' + name + '
+טלפון: ' + phone + '
+מחיר שבחרתי: ' + _regTier);
+  window.open('https://wa.me/972XXXXXXXXX?text=' + msg, '_blank');
+  document.getElementById('reg-modal').close();
+}
+</script>
 
 <!-- ════════ FAQ ════════ -->
 <div class="bg-cream">
   <div class="s">
+    <p class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1rem,2vw,1.2rem);color:var(--brown);line-height:1.75;margin-bottom:.6rem;">
+      זה ריטריט פשוט, ששם דגש על התרגול, הפשטות, השקט, הניתוק והנוכחות.
+    </p>
+    <p class="fade fd1" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.95rem,1.9vw,1.1rem);color:var(--text);opacity:.72;line-height:1.75;margin-bottom:.4rem;">
+      חיבור פשוט. נשים יחד. תרגול, ים, אוכל, שיחות, מדורה, שקט.
+    </p>
+    <p class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.95rem,1.9vw,1.1rem);color:var(--text);opacity:.72;line-height:1.75;margin-bottom:.4rem;">
+      אפשר להגיע לבד, עם חברה, עם אמא. כל אחת מהמקום שלה.
+    </p>
+    <p class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.95rem,1.9vw,1.1rem);color:var(--text);opacity:.72;line-height:1.75;margin-bottom:2.5rem;">
+      ומה שנבנה שם, נבנה מתוך מפגש אמיתי.
+    </p>
     <span class="eyebrow fade">שאלות</span>
     <div class="faq-item fade fd1">
       <p class="faq-q">צריך ניסיון ביוגה?</p>
