@@ -781,7 +781,7 @@
         <div style="border-top:1.5px solid rgba(122,78,53,.35);padding-top:.9rem;">
           <p style="font-family:'Frank Ruhl Libre',serif;font-size:1rem;color:var(--brown);margin:0 0 .75rem;font-weight:400;">חוויה ומקום</p>
           <ul style="list-style:none;padding:0;margin:0;font-family:'Heebo',sans-serif;font-size:.83rem;color:var(--brown);line-height:1;">
-            <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">יום טיול בהרי סיני</li>
+            <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">חוויה בהרי סיני</li>
             <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">שנורקלינג בריף המטריף של סיני</li>
             <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">טבילה בים ובמדבר</li>
             <li style="padding:.38rem 0;border-bottom:1px solid rgba(122,78,53,.09);">מדורה בחוף — ערב שלא ישכח</li>
@@ -1142,7 +1142,7 @@
         </div>
         <div style="display:grid;grid-template-columns:7rem 1fr;gap:.8rem 1.5rem;padding:.7rem 0;border-bottom:1px solid rgba(160,114,74,.1);">
           <span style="font-size:.78rem;color:var(--clay);opacity:.7;padding-top:.15rem;direction:ltr;text-align:right;">אופציה ב׳</span>
-          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">נסיעה להרים</span></div>
+          <div><span style="font-size:.88rem;color:var(--brown);font-weight:500;">חוויה בהרי סיני</span><br><span style="font-size:.8rem;color:var(--text);opacity:.6;line-height:1.7;">נסיעה מחוץ לקאמפ</span></div>
         </div>
 
         <!-- ערב -->
@@ -1282,7 +1282,7 @@
         <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>תרגולי יוגה בוקר ושקיעה</li>
         <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>סשני עומק · פילוסופיה · נשימה · מדיטציה</li>
         <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>סאונד הילינג · ריברסינג · שטיפה אנרגטית עם נויה</li>
-        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>יום טיול להרים · מדורה · טקס קקאו</li>
+        <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>חוויה בהרי סיני · מדורה · טקס קקאו</li>
         <li style="display:flex;align-items:flex-start;gap:.8rem;font-family:'Frank Ruhl Libre',serif;font-size:clamp(.9rem,1.9vw,1.05rem);color:var(--brown);line-height:1.6;"><span style="flex-shrink:0;color:var(--clay);margin-top:.15em;">✦</span>הסעה מסודרת מהגבול לקאמפ וחזרה</li>
       </ul>
       <p style="font-family:'Heebo',sans-serif;font-size:.8rem;color:var(--clay);opacity:.65;margin:1.2rem 0 0;">לא כולל: מכס, מעבר גבול, ביטוח נסיעות</p>
@@ -1401,6 +1401,25 @@ function sendRegWhatsApp() {
 }
 </script>
 
+<!-- עדכונים -->
+<div style="background:var(--sand);padding:4.5rem 2rem;text-align:center;">
+  <span style="font-family:'Heebo',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);opacity:.7;display:block;margin-bottom:.8rem;">סדנאות · תרגולים · ריטריטים</span>
+  <p style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.2rem,2.8vw,1.6rem);color:var(--brown);margin:0 0 .5rem;font-weight:600;">רוצה לשמוע על האירוע הבא?</p>
+  <p style="font-family:'Heebo',sans-serif;font-size:.88rem;color:var(--clay);opacity:.7;margin:0 0 2rem;">השאירי שם ומייל ונעדכן אותך ראשונה</p>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:.8rem;max-width:340px;margin:0 auto;">
+    <input id="upd-name" type="text" placeholder="שם" style="width:100%;padding:.75rem 1rem;border:1px solid rgba(160,114,74,.3);border-radius:2px;background:#fff;font-family:'Heebo',sans-serif;font-size:.9rem;direction:rtl;box-sizing:border-box;color:var(--dark);">
+    <input id="upd-email" type="email" placeholder="מייל" style="width:100%;padding:.75rem 1rem;border:1px solid rgba(160,114,74,.3);border-radius:2px;background:#fff;font-family:'Heebo',sans-serif;font-size:.9rem;direction:ltr;text-align:right;box-sizing:border-box;color:var(--dark);">
+    <button onclick="sendUpdate()" style="width:100%;padding:.8rem 1rem;background:var(--clay);color:var(--cream);border:none;border-radius:2px;font-family:'Heebo',sans-serif;font-size:.9rem;cursor:pointer;letter-spacing:.06em;">שלחי לי עדכונים</button>
+    <div style="margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid rgba(160,114,74,.18);width:100%;text-align:center;">
+      <p style="font-family:'Frank Ruhl Libre',serif;font-size:.95rem;color:var(--brown);margin:0 0 .2rem;opacity:.8;">עוד תמונות, תרגולים ורגעים מהדרך</p>
+      <p style="font-family:'Frank Ruhl Libre',serif;font-style:italic;font-size:.88rem;color:var(--clay);opacity:.7;margin:0 0 1rem;">מוזמנת לעקוב אחרי</p>
+      <a href="https://www.instagram.com/may_anglister?igsh=cjBhc21pdDM2ZGM0&utm_source=qr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--clay);font-family:'Heebo',sans-serif;font-size:.88rem;letter-spacing:.1em;border:1px solid rgba(160,114,74,.4);padding:.55rem 1.2rem;border-radius:2px;transition:all .2s;" onmouseover="this.style.background='rgba(160,114,74,.08)'" onmouseout="this.style.background='transparent'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @may_anglister
+      </a>
+    </div>
+  </div>
+</div>
 <!-- ════════ FAQ ════════ -->
 <div class="bg-cream">
   <div class="s">
@@ -1416,7 +1435,7 @@ function sendRegWhatsApp() {
     <p class="fade fd2" style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(.95rem,1.9vw,1.1rem);color:var(--text);opacity:.72;line-height:1.75;margin-bottom:2.5rem;">
       ומה שנבנה שם, נבנה מתוך מפגש אמיתי.
     </p>
-    <span class="eyebrow fade">שאלות</span>
+    <span class="eyebrow fade">שאלות ותשובות</span>
     <div class="faq-item fade fd1">
       <p class="faq-q">צריך ניסיון ביוגה?</p>
       <p class="faq-a">הריטריט פתוח לכולם. אין צורך בניסיון מתקדם, רק רצון להיות נוכחים.</p>
@@ -1457,6 +1476,7 @@ function sendRegWhatsApp() {
 </section>
 
 
+
 <!-- COLLAGE -->
 <div style="width:100%;overflow:hidden;line-height:0;">
   <img src="/images/collage.png" alt="" loading="lazy" style="width:100%;display:block;">
@@ -1464,9 +1484,21 @@ function sendRegWhatsApp() {
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-name">מאי אנגליסטר</p>
-  <p class="footer-sub">מסע אל הלב · ביר סוור, סיני</p>
+  <p style="font-family:'Frank Ruhl Libre',serif;font-size:.95rem;color:rgba(246,242,236,.7);margin:0 0 .3rem;letter-spacing:.04em;">מאי אנגליסטר</p>
+  <p style="font-family:'Heebo',sans-serif;font-size:.75rem;color:rgba(246,242,236,.4);margin:0 0 .2rem;letter-spacing:.06em;">mai3730@gmail.com</p>
+  <p style="font-family:'Heebo',sans-serif;font-size:.72rem;color:rgba(246,242,236,.3);margin:0;letter-spacing:.1em;">ביר סוור, סיני</p>
 </footer>
+
+<script>
+function sendUpdate() {
+  var name = document.getElementById('upd-name').value.trim();
+  var email = document.getElementById('upd-email').value.trim();
+  if (!name || !email) { alert('נא למלא שם ומייל'); return; }
+  var subj = encodeURIComponent('עדכונים לאירוע הבא — ' + name);
+  var body = encodeURIComponent('שם: ' + name + '\nמייל: ' + email + '\n\nאני רוצה לקבל עדכונים על האירוע הבא של מסע אל הלב.');
+  window.location.href = 'mailto:mai3730@gmail.com?subject=' + subj + '&body=' + body;
+}
+</script>
 
 
 <script>
