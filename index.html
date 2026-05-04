@@ -647,6 +647,12 @@
     .cc-wide { grid-column: span 2; }
     .wa-float span:not(.wa-dot) { display: none; }
     .wa-float { padding: 1rem 1.2rem; }
+
+    /* Stack grid layouts on mobile */
+    div[style*="grid-template-columns:36% 64%"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns:36% 64%"] > div:first-child { display: none; }
+    div[style*="grid-template-columns:58% 42%"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns:58% 42%"] > div:last-child { min-height: 420px !important; }
   }
 
   </style>
